@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN_MQTT" Id="{7bd9a328-88bd-4574-ab8c-4a45fe0c0601}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN_MQTT
+VAR
+    fbMqttClient    : FB_IotMqttClient;
+    bSetParameter   : BOOL := TRUE;
+    bConnect        : BOOL := TRUE;
+    bSelectorManual : BOOL := FALSE;
+    
+    (* published message *)
+    sTopicPubE   : STRING(255) := 'FMS201/E'; // inputs
+    sTopicPubS   : STRING(255) := 'FMS201/S'; // outputs
+    sPayloadPubE : STRING(255);
+    sPayloadPubS : STRING(255);
+    i : UDINT;
+    fbTimer : TON := (PT:=T#200MS);
+    
+    (* received message *)
+    bSubscribed    : BOOL;
+    sTopicSub      : STRING(255) := 'NodeRed/S';
+    {attribute 'TcEncoding':='UTF-8'}
+    sTopicRcv      : STRING(255) := 'FMS201/DashBoard';
+    {attribute 'TcEncoding':='UTF-8'}
+    //wsPayloadRcv   : STRING(255);
+    sPayloadRcv    : STRING(255);
+    fbMessageQueue : FB_IotMqttMessageQueue;
+    fbMessage      : FB_IotMqttMessage;
+    
+    bNewMessage : BOOL;
+    
+    fbJsonReader : FB_JsonSaxReader;   // Lector SAX para JSON
+    pJsonParse : ITcJsonSaxHandler;
+    key : STRING;
+    value : BOOL;
+END_VAR
+
+VAR
+    (* received payload for each subscribed topic *)
+    sPayloadRcv1 : STRING(255);
+    sPayloadRcv2 : STRING(255);
+    
+    RemotoPulsadorEmergencia : BOOL;
+    
+    nchar : UDINT;
+    bParsed : BOOL;
+END_VAR
+VAR CONSTANT
+    (* subscriptions *)
+    sTopicSub1 : STRING(255) := 'my first topic';
+    sTopicSub2 : STRING(255) := 'my second topic'; 
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*****************************************************************)
+(* PROGRAMA DE GESTIÓN DE LA CONEXIÓN MQTT DE LA ESTACIÓN FMS201 *)
+(*****************************************************************)
+// inicializar la conexion MQTT
+IF bSetParameter THEN
+    bSetParameter               := FALSE;
+    fbMqttClient.sHostName      := '172.16.78.14'; // 'broker.hivemq.com'; // '172.16.78.15';
+    fbMqttClient.nHostPort      := 1883;
+//  fbMqttClient.sClientId      := 'MyTcMqttClient'; 
+    fbMqttClient.sTopicPrefix   := ''; 
+//  fbMqttClient.nKeepAlive     := 60; 
+//  fbMqttClient.sUserName      := ;
+//  fbMqttClient.sUserPassword  := ; 
+//  fbMqttClient.stWill         := ; 
+//  fbMqttClient.stTLS          := ;
+    fbMqttClient.ipMessageQueue := fbMessageQueue;
+END_IF
+
+// conectar al servidor
+fbMqttClient.Execute(bConnect);
+
+IF fbMqttClient.bConnected THEN
+    // suscribirse a los topics
+    IF NOT bSubscribed THEN
+        bSubscribed := fbMqttClient.Subscribe(
+							sTopic:=sTopicRcv, 
+							eQoS:=TcIotMqttQos.AtMostOnceDelivery
+						);
+    END_IF
+    
+    // publicar cada cierto tiempo
+    fbTimer(IN:=TRUE);
+    nchar := LEN2(ADR(sPayloadPubE));
+    IF fbTimer.Q THEN
+        fbTimer(IN:=FALSE);
+        
+        // crear mensajes de entrada y salida desde el PLC al Dashboard
+        mCreatePayloadInputs(sPayloadPubE);
+        mCreatePayloadOutputs(sPayloadPubS);
+        
+        // publicar mensajes de entrada
+        fbMqttClient.Publish( sTopic:= sTopicPubE, 
+                                pPayload:= ADR(sPayloadPubE), nPayloadSize:= LEN2(ADR(sPayloadPubE))+1, 
+                                eQoS:= TcIotMqttQos.AtMostOnceDelivery, bRetain:= FALSE, bQueue:= FALSE );
+        
+        // publicar mensajes de salida
+        fbMqttClient.Publish( sTopic:= sTopicPubS, 
+                                pPayload:= ADR(sPayloadPubS), nPayloadSize:= LEN2(ADR(sPayloadPubS))+1, 
+                                eQoS:= TcIotMqttQos.AtMostOnceDelivery, bRetain:= FALSE, bQueue:= FALSE );                                
+    END_IF
+END_IF
+
+// obtener mensajes si los hay
+IF fbMessageQueue.nQueuedMessages > 0 THEN
+    bNewMessage := TRUE;
+    
+    // obtener el mensaje   
+    IF fbMessageQueue.Dequeue(fbMessage:=fbMessage) THEN
+        // obtener el topic y el contenido
+        fbMessage.GetTopic(pTopic:=ADR(sTopicRcv), nTopicSize:=SIZEOF(sTopicRcv) );
+        fbMessage.GetPayload(pPayload:=ADR(sPayloadRcv), nPayloadSize:=SIZEOF(sPayloadRcv), bSetNullTermination:=FALSE);
+        
+        // parsear el contenido y actualizar las variables del programa
+        bParsed := mParseJSON(sPayloadRcv);
+    END_IF
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="mAssignBoolValue" Id="{f947f41e-ef27-4e18-9262-4e323a7160d1}">
+      <Declaration><![CDATA[METHOD mAssignBoolValue : BOOL
+VAR_INPUT
+   	keyName : STRING(255) := '';
+	boolValue : BOOL := FALSE;
+END_VAR
+VAR
+    retValue : BOOL := TRUE;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[(* Asignar el valor BOOL a una variable compatible *)
+IF keyName = 'DPO' THEN
+	MAIN.Estacion.DesconectaEstacion := boolValue;
+ELSIF keyName = 'SM' THEN
+    MAIN_MQTT.bSelectorManual := boolValue; // esto es especial para poner la estación en modo manual de forma remota
+ELSIF keyName = 'LA' THEN
+    MAIN.Estacion.LamparaAlarma := boolValue;
+ELSIF keyName = 'LM' THEN
+    MAIN.Estacion.LamparaMarcha := boolValue;
+ELSIF keyName = 'FM' THEN
+    MAIN.Estacion.LamparaMaterial := boolValue;
+ELSIF keyName = 'RUN' THEN
+    MAIN.Estacion.CintaActiva := boolValue;
+ELSIF keyName = 'REV' THEN
+    MAIN.Estacion.CintaInvierte := boolValue;
+ELSIF keyName = 'R1' THEN
+    MAIN.Estacion.RetenedorBaja := boolValue;
+ELSIF keyName = 'S1' THEN
+    MAIN.Estacion.SeparadorSube := boolValue;
+ELSIF keyName = 'AS' THEN
+    MAIN.Estacion.AvisadorSonoro := boolValue;
+ELSIF keyName = 'A1' THEN
+    MAIN.Estacion.DescargadorAvanza := boolValue;
+ELSIF keyName = 'A0' THEN
+    MAIN.Estacion.DescargadorRetrocede := boolValue;
+ELSIF keyName = 'B1' THEN
+    MAIN.Estacion.DescargadorBaja := boolValue;
+ELSIF keyName = 'C1' THEN
+    MAIN.Estacion.RechazadorAvanza := boolValue;
+ELSIF keyName = 'D1' THEN
+    MAIN.Estacion.VerificadorBaja := boolValue;
+ELSIF keyName = 'E1' THEN
+    MAIN.Estacion.DesplazadorAvanza := boolValue;
+ELSIF keyName = 'F1' THEN
+    MAIN.Estacion.AlimentadorAvanza := boolValue;
+ELSIF keyName = 'V1' THEN
+    MAIN.Estacion.DescargadorSucciona := boolValue;
+ELSE 
+    retValue := FALSE;
+END_IF;
+
+// devolver si hay se ha completado con éxito o no (en caso de que no haya ninguna variable con ese nombre)
+mAssignBoolValue := retValue;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mAssignIntValue" Id="{253126ce-b8d5-411a-9312-1a54cd63837b}">
+      <Declaration><![CDATA[METHOD mAssignIntValue : BOOL
+VAR_INPUT
+   	keyName : STRING(255) := '';
+	intValue : INT := 0;
+END_VAR
+VAR
+    retValue : BOOL := TRUE;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[(* Asignar el valor INT a una variable compatible *)
+IF keyName = 'PV' THEN
+    MAIN.Estacion.UnidadesSolicitadas := TO_UINT(intValue);
+ELSE
+    retValue := FALSE;
+END_IF;
+
+// devolver si hay se ha completado con éxito o no (en caso de que no haya ninguna variable con ese nombre)
+mAssignIntValue := retValue;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mCreatePayloadInputs" Id="{1975a248-4320-4a15-a4b2-e97df8b03aea}">
+      <Declaration><![CDATA[METHOD mCreatePayloadInputs : BOOL
+VAR_IN_OUT
+    sPayloadPub : STRING(255);
+END_VAR
+VAR
+    jsonWriter : FB_JsonSaxWriter;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF SUCCEEDED(jsonWriter.StartObject()) THEN
+    // panel y general
+    jsonWriter.AddKeyBool('PE',MAIN.Estacion.PulsadorEmergencia);
+    jsonWriter.AddKeyBool('SM',MAIN.Estacion.SelectorManual);
+    jsonWriter.AddKeyBool('PM',MAIN.Estacion.PulsadorMarcha);
+    jsonWriter.AddKeyBool('PS',MAIN.Estacion.PulsadorParada);
+    jsonWriter.AddKeyBool('POC',MAIN.Estacion.EstacionConectada);
+    jsonWriter.AddKeyBool('dp',MAIN.Estacion.DetectorPresion);
+    
+    // cinta
+    jsonWriter.AddKeyBool('pp',MAIN.Estacion.PresenciaPale);
+    jsonWriter.AddKeyBool('cp0',MAIN.Estacion.CodigoPaleBit0);
+    jsonWriter.AddKeyBool('cp1',MAIN.Estacion.CodigoPaleBit1);
+    jsonWriter.AddKeyBool('cp2',MAIN.Estacion.CodigoPaleBit2);
+    
+    // descargador
+    jsonWriter.AddKeyBool('a0',MAIN.Estacion.DescargadorDetras);
+    jsonWriter.AddKeyBool('a1',MAIN.Estacion.DescargadorDelante);
+    jsonWriter.AddKeyBool('b0',MAIN.Estacion.DescargadorArriba);
+    jsonWriter.AddKeyBool('b1',MAIN.Estacion.DescargadorAbajo);
+    jsonWriter.AddKeyBool('v1',MAIN.Estacion.DescargadorVacio);
+    
+    // verificador
+    jsonWriter.AddKeyBool('d0',MAIN.Estacion.VerificadorArriba);
+    jsonWriter.AddKeyBool('d1',MAIN.Estacion.VerificadorAbajo);
+    
+    // desplazador
+    jsonWriter.AddKeyBool('e0',MAIN.Estacion.DesplazadorDetras);
+    
+    // alimentador
+    jsonWriter.AddKeyBool('f0',MAIN.Estacion.AlimentadorDetras);
+    jsonWriter.AddKeyBool('f1',MAIN.Estacion.AlimentadorDelante);
+    jsonWriter.AddKeyBool('pb',MAIN.Estacion.PresenciaBase);
+
+    // info
+    jsonWriter.AddKeyNumber('P',MAIN.Estacion.UnidadesSolicitadas);
+    jsonWriter.AddKeyNumber('C',MAIN.Estacion.UnidadesPendientes);
+    jsonWriter.AddKeyNumber('R',MAIN.Estacion.UnidadesRealizadas);
+    jsonWriter.AddKeyNumber('N',MAIN.Estacion.UnidadesRechazadas);
+    
+    (*
+    // with GVL
+    // panel
+    jsonWriter.AddKeyBool('PE',PulsadorEmergencia);
+    jsonWriter.AddKeyBool('SM',SelectorManual);
+    jsonWriter.AddKeyBool('PM',PulsadorMarcha);
+    jsonWriter.AddKeyBool('PP',PulsadorParada);
+    jsonWriter.AddKeyBool('POC',EstacionConectada);
+    
+    // cinta
+    jsonWriter.AddKeyBool('pp',PresenciaPale);
+    jsonWriter.AddKeyBool('cp0',CodigoPaleBit0);
+    jsonWriter.AddKeyBool('cp1',CodigoPaleBit1);
+    jsonWriter.AddKeyBool('cp2',CodigoPaleBit2);
+    jsonWriter.AddKeyBool('dp',DetectorPresion);
+    
+    // descargador
+    jsonWriter.AddKeyBool('a0',DescargadorDetras);
+    jsonWriter.AddKeyBool('a1',DescargadorDelante);
+    jsonWriter.AddKeyBool('b0',DescargadorArriba);
+    jsonWriter.AddKeyBool('b1',DescargadorAbajo);
+    
+    // verificador
+    jsonWriter.AddKeyBool('d0',VerificadorArriba);
+    jsonWriter.AddKeyBool('d1',VerificadorAbajo);
+    
+    // desplazador
+    jsonWriter.AddKeyBool('e0',DesplazadorDetras);
+    
+    // alimentador
+    jsonWriter.AddKeyBool('f0',AlimentadorDetras);
+    jsonWriter.AddKeyBool('f1',AlimentadorDelante);
+    jsonWriter.AddKeyBool('pb',PresenciaBase);
+    
+    // descargador
+    jsonWriter.AddKeyBool('v1',DescargadorVacio);
+
+    // info
+    jsonWriter.AddKeyNumber('PV',nSolicitadas);
+    *)
+END_IF
+
+IF SUCCEEDED(jsonWriter.EndObject()) THEN
+    sPayloadPub := jsonWriter.GetDocument();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mCreatePayloadOutputs" Id="{4e0af483-355d-4589-93f7-88ff922c40e4}">
+      <Declaration><![CDATA[METHOD mCreatePayloadOutputs : BOOL
+VAR_IN_OUT
+    sPayloadPub : STRING(255);
+END_VAR
+VAR
+    jsonWriter : FB_JsonSaxWriter;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF SUCCEEDED(jsonWriter.StartObject()) THEN
+    // with local variables
+    // panel y generales
+    jsonWriter.AddKeyBool('DPO',MAIN.Estacion.DesconectaEstacion);
+    jsonWriter.AddKeyBool('LA',MAIN.Estacion.LamparaAlarma);
+    jsonWriter.AddKeyBool('LM',MAIN.Estacion.LamparaMarcha);
+    jsonWriter.AddKeyBool('FM',MAIN.Estacion.LamparaMaterial);
+    jsonWriter.AddKeyBool('AS',MAIN.Estacion.AvisadorSonoro);
+    
+    // cinta
+    jsonWriter.AddKeyBool('RUN',MAIN.Estacion.CintaActiva);
+    jsonWriter.AddKeyBool('REV',MAIN.Estacion.CintaInvierte);
+    jsonWriter.AddKeyBool('R1',MAIN.Estacion.RetenedorBaja);
+    jsonWriter.AddKeyBool('S1',MAIN.Estacion.SeparadorSube);
+    
+    // alimentador
+    jsonWriter.AddKeyBool('F1',MAIN.Estacion.AlimentadorAvanza);
+    
+    // descargador
+    jsonWriter.AddKeyBool('A1',MAIN.Estacion.DescargadorAvanza);
+    jsonWriter.AddKeyBool('A0',MAIN.Estacion.DescargadorRetrocede);
+    jsonWriter.AddKeyBool('B1',MAIN.Estacion.DescargadorBaja);
+    jsonWriter.AddKeyBool('V1',MAIN.Estacion.DescargadorSucciona);
+    
+    // rechazador
+    jsonWriter.AddKeyBool('C1',MAIN.Estacion.RechazadorAvanza);
+    
+    // verificador
+    jsonWriter.AddKeyBool('D1',MAIN.Estacion.VerificadorBaja);
+    
+    // desplazador
+    jsonWriter.AddKeyBool('E1',MAIN.Estacion.DesplazadorAvanza);
+
+    (*
+    // with GVL
+    jsonWriter.AddKeyBool('DPO',DesconectaEstacion);
+    jsonWriter.AddKeyBool('LA',LamparaAlarma);
+    jsonWriter.AddKeyBool('LM',LamparaMarcha);
+    jsonWriter.AddKeyBool('FM',LamparaMaterial);
+    jsonWriter.AddKeyBool('RUN',CintaActiva);
+    jsonWriter.AddKeyBool('REV',CintaInvierte);
+    jsonWriter.AddKeyBool('R1',RetenedorBaja);
+    jsonWriter.AddKeyBool('S1',SeparadorSube);
+    jsonWriter.AddKeyBool('AS',AvisadorSonoro);
+    
+    jsonWriter.AddKeyBool('A1',DescargadorAvanza);
+    jsonWriter.AddKeyBool('A0',DescargadorRetrocede);
+    jsonWriter.AddKeyBool('B1',DescargadorBaja);
+    jsonWriter.AddKeyBool('C1',RechazadorAvanza);
+    jsonWriter.AddKeyBool('D1',VerificadorBaja);
+    jsonWriter.AddKeyBool('E1',DesplazadorAvanza);
+    jsonWriter.AddKeyBool('F1',AlimentadorAvanza);
+    jsonWriter.AddKeyBool('V1',DescargadorSucciona);
+    *)
+END_IF
+
+IF SUCCEEDED(jsonWriter.EndObject()) THEN
+    sPayloadPub := jsonWriter.GetDocument();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mParseJSON" Id="{7eadcb05-2d84-49ce-8dc3-8baf8a02f355}">
+      <Declaration><![CDATA[METHOD mParseJSON : BOOL
+VAR_INPUT
+    jsonString : STRING(255) := '{"LM":true,"LA":2}';
+END_VAR
+VAR
+	index : INT := 1;
+	pos : INT := 1;
+	keyStart, keyEnd, valueStart, valueEnd : INT;
+	inKey : BOOL := FALSE;
+	inValue : BOOL := FALSE;
+	currentChar : STRING(1);
+	keyName : STRING(50);
+	value : STRING(50);
+	
+	boolValue : BOOL;
+	intValue : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[pos := 1;
+WHILE pos <= LEN(jsonString) DO
+	currentChar := MID(jsonString, 1, pos);
+	
+	IF currentChar = '"' THEN
+		IF NOT inKey AND NOT inValue THEN
+			keyStart := pos + 1;
+			inKey := TRUE;
+		ELSIF inKey THEN
+			keyEnd := pos - 1;
+			inKey := FALSE;
+			keyName := MID(jsonString, keyEnd - keyStart + 1, keyStart);
+		END_IF;
+	
+	ELSIF currentChar = ':' THEN
+		valueStart := pos + 1;
+		inValue := TRUE;
+	
+	ELSIF (currentChar = ',' OR currentChar = '}') AND inValue THEN
+		valueEnd := pos - 1;
+		inValue := FALSE;
+		
+		// get value
+		value := MID(jsonString, valueEnd - valueStart + 1, valueStart);
+		
+        IF MAIN.bModoManual THEN
+            // value asignation
+            IF value = 'true' THEN
+                mAssignBoolValue(keyName, TRUE);
+            ELSIF value = 'false' THEN
+                mAssignBoolValue(keyName, FALSE);
+            ELSE
+                mAssignIntValue(keyName, STRING_TO_INT(value));
+            END_IF;
+        END_IF
+        
+        IF keyName = 'SM' THEN
+            MAIN_MQTT.bSelectorManual := value = 'true';
+        END_IF
+	END_IF;
+	
+	pos := pos + 1;
+END_WHILE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="MAIN_MQTT">
+      <LineId Id="509" Count="0" />
+      <LineId Id="506" Count="1" />
+      <LineId Id="500" Count="0" />
+      <LineId Id="362" Count="12" />
+      <LineId Id="501" Count="0" />
+      <LineId Id="375" Count="1" />
+      <LineId Id="380" Count="1" />
+      <LineId Id="502" Count="0" />
+      <LineId Id="382" Count="1" />
+      <LineId Id="560" Count="0" />
+      <LineId Id="559" Count="0" />
+      <LineId Id="561" Count="0" />
+      <LineId Id="384" Count="1" />
+      <LineId Id="503" Count="0" />
+      <LineId Id="386" Count="13" />
+      <LineId Id="445" Count="0" />
+      <LineId Id="400" Count="9" />
+      <LineId Id="505" Count="0" />
+      <LineId Id="410" Count="0" />
+      <LineId Id="446" Count="0" />
+      <LineId Id="411" Count="2" />
+      <LineId Id="504" Count="0" />
+      <LineId Id="448" Count="0" />
+      <LineId Id="430" Count="0" />
+      <LineId Id="432" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN_MQTT.mAssignBoolValue">
+      <LineId Id="108" Count="0" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="118" Count="0" />
+      <LineId Id="117" Count="0" />
+      <LineId Id="13" Count="1" />
+      <LineId Id="73" Count="16" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="100" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="127" Count="0" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="103" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN_MQTT.mAssignIntValue">
+      <LineId Id="159" Count="0" />
+      <LineId Id="117" Count="1" />
+      <LineId Id="155" Count="2" />
+      <LineId Id="168" Count="0" />
+      <LineId Id="158" Count="0" />
+      <LineId Id="103" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN_MQTT.mCreatePayloadInputs">
+      <LineId Id="34" Count="0" />
+      <LineId Id="109" Count="0" />
+      <LineId Id="112" Count="5" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="118" Count="4" />
+      <LineId Id="124" Count="5" />
+      <LineId Id="160" Count="0" />
+      <LineId Id="130" Count="11" />
+      <LineId Id="145" Count="1" />
+      <LineId Id="111" Count="0" />
+      <LineId Id="149" Count="0" />
+      <LineId Id="161" Count="1" />
+      <LineId Id="148" Count="0" />
+      <LineId Id="110" Count="0" />
+      <LineId Id="150" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="43" Count="3" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="65" Count="3" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="72" Count="3" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="99" Count="1" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="151" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="33" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN_MQTT.mCreatePayloadOutputs">
+      <LineId Id="34" Count="0" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="95" Count="4" />
+      <LineId Id="123" Count="0" />
+      <LineId Id="125" Count="0" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="100" Count="4" />
+      <LineId Id="133" Count="0" />
+      <LineId Id="135" Count="0" />
+      <LineId Id="134" Count="0" />
+      <LineId Id="105" Count="3" />
+      <LineId Id="126" Count="0" />
+      <LineId Id="132" Count="0" />
+      <LineId Id="127" Count="0" />
+      <LineId Id="109" Count="1" />
+      <LineId Id="129" Count="0" />
+      <LineId Id="128" Count="0" />
+      <LineId Id="111" Count="0" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="130" Count="0" />
+      <LineId Id="136" Count="0" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="47" Count="1" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="72" Count="1" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="78" Count="1" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="82" Count="1" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="115" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="33" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN_MQTT.mParseJSON">
+      <LineId Id="21" Count="24" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="48" Count="4" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="86" Count="3" />
+      <LineId Id="62" Count="2" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
