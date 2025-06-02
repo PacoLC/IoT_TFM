@@ -1,4 +1,4 @@
-# 🧱 Sistema Domótico IoT con Docker Compose
+# 🧱 Sistema IoT contenerizado con Docker Compose
 
 Este proyecto configura un entorno completo de automatización del hogar e integración IoT utilizando contenedores Docker. Incluye los siguientes servicios principales:
 
