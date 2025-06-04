@@ -1,0 +1,53 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm remove @flowfuse/node-red-dashboard-2-ui-led
+8 verbose argv "remove" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "@flowfuse/node-red-dashboard-2-ui-led"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2025-03-31T17_39_15_197Z-
+10 verbose logfile /data/.npm/_logs/2025-03-31T17_39_15_197Z-debug-0.log
+11 silly packumentCache heap:2038431744 maxSize:509607936 maxEntrySize:254803968
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly reify mark retired [ '/data/node_modules/@flowfuse/node-red-dashboard-2-ui-led' ]
+16 silly reify mark retired [ '/data/node_modules/@vue/devtools-api' ]
+17 silly reify mark retired [ '/data/node_modules/escape-regexp-component' ]
+18 silly reify mark retired [ '/data/node_modules/title-case-minors' ]
+19 silly reify mark retired [ '/data/node_modules/to-capital-case' ]
+20 silly reify mark retired [ '/data/node_modules/to-no-case' ]
+21 silly reify mark retired [ '/data/node_modules/to-sentence-case' ]
+22 silly reify mark retired [ '/data/node_modules/to-space-case' ]
+23 silly reify mark retired [ '/data/node_modules/to-title-case' ]
+24 silly reify mark retired [ '/data/node_modules/vuex' ]
+25 silly reify moves {
+25 silly reify   '/data/node_modules/@flowfuse/node-red-dashboard-2-ui-led': '/data/node_modules/@flowfuse/.node-red-dashboard-2-ui-led-ybjM2zSl',
+25 silly reify   '/data/node_modules/@vue/devtools-api': '/data/node_modules/@vue/.devtools-api-Eie05NWJ',
+25 silly reify   '/data/node_modules/escape-regexp-component': '/data/node_modules/.escape-regexp-component-0yvQDf3O',
+25 silly reify   '/data/node_modules/title-case-minors': '/data/node_modules/.title-case-minors-RDQo1hmY',
+25 silly reify   '/data/node_modules/to-capital-case': '/data/node_modules/.to-capital-case-0fKw3zUD',
+25 silly reify   '/data/node_modules/to-no-case': '/data/node_modules/.to-no-case-Mmgfob66',
+25 silly reify   '/data/node_modules/to-sentence-case': '/data/node_modules/.to-sentence-case-bqzNQo5I',
+25 silly reify   '/data/node_modules/to-space-case': '/data/node_modules/.to-space-case-M0Y2qMsr',
+25 silly reify   '/data/node_modules/to-title-case': '/data/node_modules/.to-title-case-DXRMgmHd',
+25 silly reify   '/data/node_modules/vuex': '/data/node_modules/.vuex-vIXU4hmk'
+25 silly reify }
+26 silly REMOVE node_modules/vuex
+27 silly REMOVE node_modules/to-title-case
+28 silly REMOVE node_modules/to-space-case
+29 silly REMOVE node_modules/to-sentence-case
+30 silly REMOVE node_modules/to-no-case
+31 silly REMOVE node_modules/to-capital-case
+32 silly REMOVE node_modules/title-case-minors
+33 silly REMOVE node_modules/escape-regexp-component
+34 silly REMOVE node_modules/@vue/devtools-api
+35 silly REMOVE node_modules/@flowfuse/node-red-dashboard-2-ui-led
+36 verbose cwd /data
+37 verbose os Linux 6.6.51+rpt-rpi-v8
+38 verbose node v20.18.0
+39 verbose npm  v10.8.2
+40 verbose exit 0
+41 info ok

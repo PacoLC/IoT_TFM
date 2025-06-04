@@ -1,0 +1,52 @@
+[2024-11-21 12:50:19] info: 	z2m: Logging to console, file (filename: log.log)
+[2024-11-21 12:50:19] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2024-11-21 12:50:19] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2024-11-21 12:50:20] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2024-11-21 12:50:20] info: 	zh:zstack:znp: Serialport opened
+[2024-11-21 12:50:23] info: 	z2m: zigbee-herdsman started (resumed)
+[2024-11-21 12:50:23] info: 	z2m: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}'
+[2024-11-21 12:50:23] info: 	z2m: Currently 0 devices are joined.
+[2024-11-21 12:50:23] warning: 	z2m: `permit_join` set to  `true` in configuration.yaml.
+[2024-11-21 12:50:23] warning: 	z2m: Allowing new devices to join.
+[2024-11-21 12:50:23] warning: 	z2m: Set `permit_join` to `false` once you joined all devices.
+[2024-11-21 12:50:23] info: 	z2m: Zigbee: allowing new devices to join.
+[2024-11-21 12:50:23] info: 	z2m: Connecting to MQTT server at mqtt://mosquitto
+[2024-11-21 12:50:23] info: 	z2m: Connected to MQTT server
+[2024-11-21 12:50:23] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+[2024-11-21 12:50:23] info: 	z2m: Started frontend on port 8080
+[2024-11-21 12:50:23] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+[2024-11-21 12:50:23] info: 	z2m: Zigbee2MQTT started!
+[2024-11-21 12:50:28] info: 	z2m:mqtt: MQTT publish: topic 'homeassistant/binary_sensor/1221051039810110150109113116116_0x00124b002f8b4661/connection_state/config', payload '{"device":{"hw_version":"zStack3x0 20220219","identifiers":["zigbee2mqtt_bridge_0x00124b002f8b4661"],"manufacturer":"Zigbee2MQTT","model":"Bridge","name":"Zigbee2MQTT Bridge","sw_version":"1.41.0"},"device_class":"connectivity","entity_category":"diagnostic","name":"Connection state","object_id":"zigbee2mqtt_bridge_connection_state","origin":{"name":"Zigbee2MQTT","sw":"1.41.0","url":"https://www.zigbee2mqtt.io"},"payload_off":"offline","payload_on":"online","state_topic":"zigbee2mqtt/bridge/state","unique_id":"bridge_0x00124b002f8b4661_connection_state_zigbee2mqtt","value_template":"{{ value_json.state }}"}'
+[2024-11-21 12:51:02] error: 	zh:zstack:znp: Error while parsing to ZpiObject 'TypeError: Cannot read properties of undefined (reading 'name')'
+[2024-11-21 12:51:33] error: 	zh:zstack:znp: Error while parsing to ZpiObject 'TypeError: Cannot read properties of undefined (reading 'name')'
+[2024-11-21 12:53:10] error: 	zh:zstack:znp: Error while parsing to ZpiObject 'TypeError: Cannot read properties of undefined (reading 'name')'
+[2024-11-21 12:53:43] error: 	zh:controller: Failed to keep permit join alive: Error: --> 'SREQ: ZDO - PERMIT_JOINING_REQUEST - 0ffcfffe01' failed with status '(0xc2: NWK_INVALID_REQUEST)'
+[2024-11-21 12:54:44] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:54:44] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: '--> 'SREQ: AF - dataRequestExt - {"dstaddrmode":2,"dstaddr":"0x000000000000fffd","destendpoint":242,"dstpanid":0,"srcendpoint":242,"clusterid":33,"transid":2,"options":0,"radius":30,"len":6,"data":{"type":"Buffer","data":[25,3,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')'
+[2024-11-21 12:54:44] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"--> 'SREQ: AF - dataRequestExt - {\"dstaddrmode\":2,\"dstaddr\":\"0x000000000000fffd\",\"destendpoint\":242,\"dstpanid\":0,\"srcendpoint\":242,\"clusterid\":33,\"transid\":2,\"options\":0,\"radius\":30,\"len\":6,\"data\":{\"type\":\"Buffer\",\"data\":[25,3,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')","status":"error","transaction":"ogaz0-1"}'
+[2024-11-21 12:54:47] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:54:51] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:54:53] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: 'SRSP - AF - dataRequestExt after 6000ms'
+[2024-11-21 12:54:53] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"SRSP - AF - dataRequestExt after 6000ms","status":"error","transaction":"ogaz0-2"}'
+[2024-11-21 12:54:58] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:54:59] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: 'SRSP - AF - dataRequestExt after 6000ms'
+[2024-11-21 12:54:59] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"SRSP - AF - dataRequestExt after 6000ms","status":"error","transaction":"ogaz0-3"}'
+[2024-11-21 12:55:05] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:55:05] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: 'SRSP - AF - dataRequestExt after 6000ms'
+[2024-11-21 12:55:05] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"SRSP - AF - dataRequestExt after 6000ms","status":"error","transaction":"ogaz0-4"}'
+[2024-11-21 12:55:11] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: 'SRSP - AF - dataRequestExt after 6000ms'
+[2024-11-21 12:55:11] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"SRSP - AF - dataRequestExt after 6000ms","status":"error","transaction":"ogaz0-5"}'
+[2024-11-21 12:58:05] error: 	zh:zstack:znp: Error while parsing to ZpiObject 'TypeError: Cannot read properties of undefined (reading 'name')'
+[2024-11-21 12:58:31] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:58:31] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: '--> 'SREQ: AF - dataRequestExt - {"dstaddrmode":2,"dstaddr":"0x000000000000fffd","destendpoint":242,"dstpanid":0,"srcendpoint":242,"clusterid":33,"transid":7,"options":0,"radius":30,"len":6,"data":{"type":"Buffer","data":[25,8,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')'
+[2024-11-21 12:58:31] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"--> 'SREQ: AF - dataRequestExt - {\"dstaddrmode\":2,\"dstaddr\":\"0x000000000000fffd\",\"destendpoint\":242,\"dstpanid\":0,\"srcendpoint\":242,\"clusterid\":33,\"transid\":7,\"options\":0,\"radius\":30,\"len\":6,\"data\":{\"type\":\"Buffer\",\"data\":[25,8,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')","status":"error","transaction":"tjb1l-1"}'
+[2024-11-21 12:59:00] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:59:00] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: '--> 'SREQ: AF - dataRequestExt - {"dstaddrmode":2,"dstaddr":"0x000000000000fffd","destendpoint":242,"dstpanid":0,"srcendpoint":242,"clusterid":33,"transid":8,"options":0,"radius":30,"len":6,"data":{"type":"Buffer","data":[25,9,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')'
+[2024-11-21 12:59:00] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"--> 'SREQ: AF - dataRequestExt - {\"dstaddrmode\":2,\"dstaddr\":\"0x000000000000fffd\",\"destendpoint\":242,\"dstpanid\":0,\"srcendpoint\":242,\"clusterid\":33,\"transid\":8,\"options\":0,\"radius\":30,\"len\":6,\"data\":{\"type\":\"Buffer\",\"data\":[25,9,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')","status":"error","transaction":"tjb1l-2"}'
+[2024-11-21 12:59:12] info: 	z2m: Zigbee: disabling joining new devices.
+[2024-11-21 12:59:12] error: 	z2m: Request 'zigbee2mqtt/bridge/request/permit_join' failed with error: '--> 'SREQ: AF - dataRequestExt - {"dstaddrmode":2,"dstaddr":"0x000000000000fffd","destendpoint":242,"dstpanid":0,"srcendpoint":242,"clusterid":33,"transid":9,"options":0,"radius":30,"len":6,"data":{"type":"Buffer","data":[25,10,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')'
+[2024-11-21 12:59:12] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{},"error":"--> 'SREQ: AF - dataRequestExt - {\"dstaddrmode\":2,\"dstaddr\":\"0x000000000000fffd\",\"destendpoint\":242,\"dstpanid\":0,\"srcendpoint\":242,\"clusterid\":33,\"transid\":9,\"options\":0,\"radius\":30,\"len\":6,\"data\":{\"type\":\"Buffer\",\"data\":[25,10,2,10,0,0]}}' failed with status '(0x02: INVALID_PARAM)' (expected '(0x00: SUCCESS)')","status":"error","transaction":"tjb1l-3"}'
+[2024-11-21 13:05:49] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"offline"}'
+[2024-11-21 13:05:49] info: 	z2m: Disconnecting from MQTT server
+[2024-11-21 13:05:49] info: 	z2m: Stopping zigbee-herdsman...
+[2024-11-21 13:05:55] error: 	zh:controller: Failed to disable join on stop: Error: SRSP - AF - dataRequestExt after 6000ms

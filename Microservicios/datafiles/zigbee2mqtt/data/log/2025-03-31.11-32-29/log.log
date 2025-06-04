@@ -1,0 +1,41 @@
+[2025-03-31 11:32:29] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-03-31 11:32:29] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2025-03-31 11:32:29] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2025-03-31 11:32:30] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2025-03-31 11:32:30] info: 	zh:zstack:znp: Serialport opened
+[2025-03-31 11:32:30] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-03-31 11:32:30] info: 	z2m: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}'
+[2025-03-31 11:32:30] info: 	z2m: 0x32d004602bd5b370 (0x32d004602bd5b370): LSPA9 - Elivco Smart plug (with power monitoring) (Router)
+[2025-03-31 11:32:30] info: 	z2m: Currently 1 devices are joined.
+[2025-03-31 11:32:30] warning: 	z2m: `permit_join` set to  `true` in configuration.yaml.
+[2025-03-31 11:32:30] warning: 	z2m: Allowing new devices to join.
+[2025-03-31 11:32:30] warning: 	z2m: Set `permit_join` to `false` once you joined all devices.
+[2025-03-31 11:32:30] info: 	z2m: Zigbee: allowing new devices to join.
+[2025-03-31 11:32:31] info: 	z2m: Connecting to MQTT server at mqtt://mosquitto
+[2025-03-31 11:32:31] info: 	z2m: Connected to MQTT server
+[2025-03-31 11:32:31] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+[2025-03-31 11:32:31] error: 	z2m: Failed to call 'Bridge' 'start' (TypeError: Cannot read properties of undefined (reading 'getDevice')
+    at Bridge.publishInfo (/app/lib/extension/bridge.ts:746:69)
+    at Bridge.start (/app/lib/extension/bridge.ts:174:20)
+    at Controller.callExtensions (/app/lib/controller.ts:399:17)
+    at Controller.start (/app/lib/controller.ts:218:9)
+    at start (/app/index.js:154:5))
+[2025-03-31 11:32:31] info: 	z2m: Started frontend on port 8080
+[2025-03-31 11:32:31] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"cc31cea","coordinator":{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b002f8b4661","panID":6754},"permit_join":true,"version":"1.41.0"}'
+[2025-03-31 11:32:31] info: 	z2m: Zigbee2MQTT started!
+[2025-03-31 11:32:41] info: 	z2m: Configuring '0x32d004602bd5b370'
+[2025-03-31 11:32:42] error: 	z2m: Failed to configure '0x32d004602bd5b370', attempt 1 (TypeError: Cannot read properties of undefined (reading 'groupID')
+    at Endpoint.bind (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:544:99)
+    at Object.bind (/app/node_modules/zigbee-herdsman-converters/src/lib/reporting.ts:42:24)
+    at configure (/app/node_modules/zigbee-herdsman-converters/src/devices/tuya.ts:5341:29)
+    at Object.configure (/app/node_modules/zigbee-herdsman-converters/src/index.ts:205:21)
+    at Configure.configure (/app/lib/extension/configure.ts:130:13)
+    at Immediate.<anonymous> (/app/lib/extension/configure.ts:75:17))
+[2025-03-31 11:33:53] info: 	zh:zstack:znp: Port closed
+[2025-03-31 11:33:53] info: 	zh:zstack:znp: closing
+[2025-03-31 11:33:53] error: 	z2m: Adapter disconnected, stopping
+[2025-03-31 11:33:53] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'offline'
+[2025-03-31 11:33:53] info: 	z2m: Disconnecting from MQTT server
+[2025-03-31 11:33:53] info: 	z2m: Stopping zigbee-herdsman...
+[2025-03-31 11:33:53] info: 	z2m: Stopped zigbee-herdsman
+[2025-03-31 11:33:53] info: 	z2m: Stopped Zigbee2MQTT

@@ -1,0 +1,70 @@
+[2025-05-05 18:23:28] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-05-05 18:23:28] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2025-05-05 18:23:28] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2025-05-05 18:23:30] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2025-05-05 18:23:30] info: 	zh:zstack:znp: Serialport opened
+[2025-05-05 18:23:33] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-05-05 18:23:33] info: 	z2m: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}'
+[2025-05-05 18:23:33] info: 	z2m: 0x32d004602bd5b370 (0x32d004602bd5b370): LSPA9 - Elivco Smart plug (with power monitoring) (Router)
+[2025-05-05 18:23:33] info: 	z2m: 0xa4c138ddf18abbdd (0xa4c138ddf18abbdd): TS011F_plug_1 - Tuya Smart plug (with power monitoring) (Router)
+[2025-05-05 18:23:33] info: 	z2m: 0x00158d000394440c (0x00158d000394440c): Not supported (Unknown)
+[2025-05-05 18:23:33] info: 	z2m: 0xa4c138a342088798 (0xa4c138a342088798): Not supported (Unknown)
+[2025-05-05 18:23:33] info: 	z2m: 0xa4c1381d20404553 (0xa4c1381d20404553): Not supported (Unknown)
+[2025-05-05 18:23:33] info: 	z2m: Currently 5 devices are joined.
+[2025-05-05 18:23:33] warning: 	z2m: `permit_join` set to  `true` in configuration.yaml.
+[2025-05-05 18:23:33] warning: 	z2m: Allowing new devices to join.
+[2025-05-05 18:23:33] warning: 	z2m: Set `permit_join` to `false` once you joined all devices.
+[2025-05-05 18:23:33] info: 	z2m: Zigbee: allowing new devices to join.
+[2025-05-05 18:23:34] info: 	z2m: Connecting to MQTT server at mqtt://mosquitto
+[2025-05-05 18:23:34] info: 	z2m: Connected to MQTT server
+[2025-05-05 18:23:34] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+[2025-05-05 18:23:34] info: 	z2m: Started frontend on port 8080
+[2025-05-05 18:23:34] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"cc31cea","coordinator":{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b002f8b4661","panID":6754},"permit_join":true,"version":"1.41.0"}'
+[2025-05-05 18:23:34] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"child_lock":"UNLOCK","countdown":0,"current":0,"energy":0,"indicator_mode":"off/on","linkquality":142,"power":0,"power_outage_memory":"restore","state":"OFF","voltage":225}'
+[2025-05-05 18:23:34] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0xa4c138ddf18abbdd', payload '{"child_lock":"UNLOCK","countdown":0,"current":0,"energy":249.15,"indicator_mode":"off/on","linkquality":247,"power":0,"power_outage_memory":"restore","state":"ON","voltage":227}'
+[2025-05-05 18:23:34] info: 	z2m: Zigbee2MQTT started!
+[2025-05-06 00:28:54] error: 	zh:controller:device: Read response to 0xa4c138a342088798 failed (ZCL command 0xa4c138a342088798/1 genTime.readRsp({"localTime":799806512}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":130,"writeUndiv":false}) failed (Data request failed with error: 'No network route' (205)))
+[2025-05-06 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-07 18:23:41] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-08 01:49:53] error: 	zh:controller:device: Read response to 0xa4c1381d20404553 failed (ZCL command 0xa4c1381d20404553/1 genTime.readRsp({"localTime":799984186}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":0,"writeUndiv":false}) failed (Data request failed with error: 'MAC no ack' (233)))
+[2025-05-08 18:23:41] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-09 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-10 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-11 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-12 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-12 22:27:45] error: 	zh:controller:device: Read response to 0xa4c1381d20404553 failed (ZCL command 0xa4c1381d20404553/1 genTime.readRsp({"localTime":800404057}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":28,"writeUndiv":false}) failed (Data request failed with error: 'MAC no ack' (233)))
+[2025-05-13 02:30:18] error: 	zh:controller:device: Read response to 0xa4c1381d20404553 failed (ZCL command 0xa4c1381d20404553/1 genTime.readRsp({"localTime":800418610}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":46,"writeUndiv":false}) failed (Data request failed with error: 'MAC no ack' (233)))
+[2025-05-13 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-13 19:34:33] info: 	zh:controller: Interview for '0xa4c138e32a5b4477' started
+[2025-05-13 19:34:33] info: 	z2m: Device '0xa4c138e32a5b4477' joined
+[2025-05-13 19:34:33] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":{"friendly_name":"0xa4c138e32a5b4477"},"type":"device_connected"}'
+[2025-05-13 19:34:33] info: 	z2m: Starting interview of '0xa4c138e32a5b4477'
+[2025-05-13 19:34:33] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0xa4c138e32a5b4477"},"type":"pairing"}'
+[2025-05-13 19:34:33] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477"},"type":"device_joined"}'
+[2025-05-13 19:34:33] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477","status":"started"},"type":"device_interview"}'
+[2025-05-13 19:36:18] error: 	zh:controller: Interview failed for '0xa4c138e32a5b4477 with error 'Error: Interview failed because can not get node descriptor ('0xa4c138e32a5b4477')'
+[2025-05-13 19:36:18] error: 	z2m: Failed to interview '0xa4c138e32a5b4477', device has not successfully been paired
+[2025-05-13 19:36:18] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_failed","meta":{"friendly_name":"0xa4c138e32a5b4477"},"type":"pairing"}'
+[2025-05-13 19:36:18] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477","status":"failed"},"type":"device_interview"}'
+[2025-05-13 21:39:42] error: 	zh:controller:device: Read response to 0xa4c138a342088798 failed (ZCL command 0xa4c138a342088798/1 genTime.readRsp({"localTime":800487565}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":177,"writeUndiv":false}) failed (Data request failed with error: 'MAC no ack' (233)))
+[2025-05-14 15:31:37] info: 	zh:controller: Interview for '0xa4c138e32a5b4477' started
+[2025-05-14 15:31:37] info: 	z2m: Starting interview of '0xa4c138e32a5b4477'
+[2025-05-14 15:31:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0xa4c138e32a5b4477"},"type":"pairing"}'
+[2025-05-14 15:31:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477","status":"started"},"type":"device_interview"}'
+[2025-05-14 15:32:37] error: 	zh:controller: Interview failed for '0xa4c138e32a5b4477 with error 'Error: Interview failed because can not get node descriptor ('0xa4c138e32a5b4477')'
+[2025-05-14 15:32:37] error: 	z2m: Failed to interview '0xa4c138e32a5b4477', device has not successfully been paired
+[2025-05-14 15:32:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_failed","meta":{"friendly_name":"0xa4c138e32a5b4477"},"type":"pairing"}'
+[2025-05-14 15:32:37] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477","status":"failed"},"type":"device_interview"}'
+[2025-05-14 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-15 01:47:54] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0xa4c138e32a5b4477"},"type":"device_announced"}'
+[2025-05-15 01:47:54] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477"},"type":"device_announce"}'
+[2025-05-15 18:23:41] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-16 00:43:57] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0xa4c138e32a5b4477"},"type":"device_announced"}'
+[2025-05-16 00:43:57] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138e32a5b4477","ieee_address":"0xa4c138e32a5b4477"},"type":"device_announce"}'
+[2025-05-16 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-16 20:00:57] error: 	zh:controller:device: Read response to 0xa4c138e32a5b4477 failed (ZCL command 0xa4c138e32a5b4477/1 genTime.readRsp({"localTime":800740840}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":62,"writeUndiv":false}) failed (Data request failed with error: 'MAC no ack' (233)))
+[2025-05-17 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-18 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-19 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-20 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-21 18:23:42] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'

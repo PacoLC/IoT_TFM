@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 4,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {"created_at":"2024-11-17T17:34:53.756771+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"sun","entry_id":"01JCXK269WSRTPT5K1XM0G491X","minor_version":1,"modified_at":"2024-11-17T17:34:53.756785+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"import","title":"Sun","unique_id":null,"version":1},
+      {"created_at":"2024-11-17T17:34:54.250505+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"go2rtc","entry_id":"01JCXK26SASRYBCWK0MAWWWWW5","minor_version":1,"modified_at":"2024-11-17T17:34:54.250519+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"system","title":"go2rtc","unique_id":null,"version":1},
+      {"created_at":"2024-11-19T10:58:34.443736+00:00","data":{"device":{"baudrate":115200,"flow_control":null,"path":"/dev/ttyUSB0"},"radio_type":"znp"},"disabled_by":"user","discovery_keys":{},"domain":"zha","entry_id":"01JD215YABER1HG243KSQVZ2WQ","minor_version":1,"modified_at":"2024-11-19T10:58:34.443749+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"usb","title":"Sonoff Zigbee 3.0 USB Dongle Plus","unique_id":"10C4:EA60_5c08fc071c27ee11ad8b86c1f49e3369_ITead_Sonoff Zigbee 3.0 USB Dongle Plus","version":4},
+      {"created_at":"2024-11-21T12:33:02.390603+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"shopping_list","entry_id":"01JD7BCBDPRKJ9T2KV1JNER5KQ","minor_version":1,"modified_at":"2024-11-21T12:33:02.390618+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","title":"Shopping list","unique_id":"shopping_list","version":1},
+      {"created_at":"2024-11-21T12:33:02.406347+00:00","data":{"language":"en","tld":"com"},"disabled_by":null,"discovery_keys":{},"domain":"google_translate","entry_id":"01JD7BCBE6K3WCDRZQADJVMDRH","minor_version":1,"modified_at":"2024-11-21T12:33:02.406362+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","title":"Google Translate text-to-speech","unique_id":null,"version":1},
+      {"created_at":"2024-11-21T12:33:02.885986+00:00","data":{"track_home":true},"disabled_by":null,"discovery_keys":{},"domain":"met","entry_id":"01JD7BCBX5PAHW2THWYBHM1X8F","minor_version":1,"modified_at":"2024-11-21T12:33:02.886001+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","title":"Home","unique_id":null,"version":1},
+      {"created_at":"2024-11-21T12:33:03.300327+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"radio_browser","entry_id":"01JD7BCCA4FX660MFJMD2S93WV","minor_version":1,"modified_at":"2024-11-21T12:33:03.300347+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","title":"Radio Browser","unique_id":null,"version":1},
+      {"created_at":"2025-03-31T09:43:19.481341+00:00","data":{"token":"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"},"disabled_by":null,"discovery_keys":{},"domain":"hacs","entry_id":"01JQNSB15S43FF1R6FX0QEE4Z6","minor_version":1,"modified_at":"2025-03-31T09:43:19.481358+00:00","options":{"experimental":true},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"user","title":"","unique_id":null,"version":1}
+    ]
+  }
+}

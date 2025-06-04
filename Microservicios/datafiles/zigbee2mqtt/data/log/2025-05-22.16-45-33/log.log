@@ -1,0 +1,34 @@
+[2025-05-22 16:45:34] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-05-22 16:45:34] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2025-05-22 16:45:34] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2025-05-22 16:45:35] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2025-05-22 16:45:35] info: 	zh:zstack:znp: Serialport opened
+[2025-05-22 16:45:39] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-05-22 16:45:39] info: 	z2m: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}'
+[2025-05-22 16:45:39] info: 	z2m: 0x32d004602bd5b370 (0x32d004602bd5b370): LSPA9 - Elivco Smart plug (with power monitoring) (Router)
+[2025-05-22 16:45:39] info: 	z2m: 0xa4c138ddf18abbdd (0xa4c138ddf18abbdd): TS011F_plug_1 - Tuya Smart plug (with power monitoring) (Router)
+[2025-05-22 16:45:39] info: 	z2m: 0x00158d000394440c (0x00158d000394440c): Not supported (Unknown)
+[2025-05-22 16:45:39] info: 	z2m: 0xa4c138a342088798 (0xa4c138a342088798): Not supported (Unknown)
+[2025-05-22 16:45:39] info: 	z2m: 0xa4c1381d20404553 (0xa4c1381d20404553): Not supported (Unknown)
+[2025-05-22 16:45:39] info: 	z2m: 0xa4c138e32a5b4477 (0xa4c138e32a5b4477): Not supported (Unknown)
+[2025-05-22 16:45:39] info: 	z2m: Currently 6 devices are joined.
+[2025-05-22 16:45:39] warning: 	z2m: `permit_join` set to  `true` in configuration.yaml.
+[2025-05-22 16:45:39] warning: 	z2m: Allowing new devices to join.
+[2025-05-22 16:45:39] warning: 	z2m: Set `permit_join` to `false` once you joined all devices.
+[2025-05-22 16:45:39] info: 	z2m: Zigbee: allowing new devices to join.
+[2025-05-22 16:45:39] info: 	z2m: Connecting to MQTT server at mqtt://mosquitto
+[2025-05-22 16:45:39] info: 	z2m: Connected to MQTT server
+[2025-05-22 16:45:39] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+[2025-05-22 16:45:39] info: 	z2m: Started frontend on port 8080
+[2025-05-22 16:45:39] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"cc31cea","coordinator":{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b002f8b4661","panID":6754},"permit_join":true,"version":"1.41.0"}'
+[2025-05-22 16:45:39] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"child_lock":"UNLOCK","countdown":0,"current":0,"energy":0,"indicator_mode":"off/on","linkquality":142,"power":0,"power_outage_memory":"restore","state":"OFF","voltage":225}'
+[2025-05-22 16:45:39] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0xa4c138ddf18abbdd', payload '{"child_lock":"UNLOCK","countdown":0,"current":0,"energy":249.15,"indicator_mode":"off/on","linkquality":247,"power":0,"power_outage_memory":"restore","state":"ON","voltage":227}'
+[2025-05-22 16:45:39] info: 	z2m: Zigbee2MQTT started!
+[2025-05-22 18:04:13] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'offline'
+[2025-05-22 18:04:13] info: 	z2m: Disconnecting from MQTT server
+[2025-05-22 18:04:13] info: 	z2m: Stopping zigbee-herdsman...
+[2025-05-22 18:04:23] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-22 18:04:23] info: 	zh:zstack:znp: closing
+[2025-05-22 18:04:23] info: 	zh:zstack:znp: Port closed
+[2025-05-22 18:04:23] info: 	z2m: Stopped zigbee-herdsman
+[2025-05-22 18:04:23] info: 	z2m: Stopped Zigbee2MQTT

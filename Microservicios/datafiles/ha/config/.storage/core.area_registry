@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "minor_version": 7,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "salon",
+        "labels": [],
+        "name": "Salón",
+        "picture": null,
+        "created_at": "2024-11-21T12:32:43.517497+00:00",
+        "modified_at": "2024-11-21T12:32:43.517508+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "cocina",
+        "labels": [],
+        "name": "Cocina",
+        "picture": null,
+        "created_at": "2024-11-21T12:32:43.517818+00:00",
+        "modified_at": "2024-11-21T12:32:43.517822+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "dormitorio",
+        "labels": [],
+        "name": "Dormitorio",
+        "picture": null,
+        "created_at": "2024-11-21T12:32:43.517932+00:00",
+        "modified_at": "2024-11-21T12:32:43.517935+00:00"
+      }
+    ]
+  }
+}

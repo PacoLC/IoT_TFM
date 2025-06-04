@@ -1,0 +1,62 @@
+[2025-04-28 12:33:58] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-04-28 12:33:58] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2025-04-28 12:33:58] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2025-04-28 12:34:00] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2025-04-28 12:34:00] info: 	zh:zstack:znp: Serialport opened
+[2025-04-28 12:34:03] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-04-28 12:34:03] info: 	z2m: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}'
+[2025-04-28 12:34:03] info: 	z2m: 0x32d004602bd5b370 (0x32d004602bd5b370): LSPA9 - Elivco Smart plug (with power monitoring) (Router)
+[2025-04-28 12:34:03] info: 	z2m: 0xa4c138ddf18abbdd (0xa4c138ddf18abbdd): TS011F_plug_1 - Tuya Smart plug (with power monitoring) (Router)
+[2025-04-28 12:34:03] info: 	z2m: 0x00158d000394440c (0x00158d000394440c): Not supported (Unknown)
+[2025-04-28 12:34:03] info: 	z2m: Currently 3 devices are joined.
+[2025-04-28 12:34:03] warning: 	z2m: `permit_join` set to  `true` in configuration.yaml.
+[2025-04-28 12:34:03] warning: 	z2m: Allowing new devices to join.
+[2025-04-28 12:34:03] warning: 	z2m: Set `permit_join` to `false` once you joined all devices.
+[2025-04-28 12:34:03] info: 	z2m: Zigbee: allowing new devices to join.
+[2025-04-28 12:34:03] info: 	z2m: Connecting to MQTT server at mqtt://mosquitto
+[2025-04-28 12:34:03] info: 	z2m: Connected to MQTT server
+[2025-04-28 12:34:03] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+[2025-04-28 12:34:03] info: 	z2m: Started frontend on port 8080
+[2025-04-28 12:34:03] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"cc31cea","coordinator":{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b002f8b4661","panID":6754},"permit_join":true,"version":"1.41.0"}'
+[2025-04-28 12:34:03] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"child_lock":"UNLOCK","countdown":0,"current":0,"energy":0,"indicator_mode":"off/on","linkquality":142,"power":0,"power_outage_memory":"restore","state":"OFF","voltage":228}'
+[2025-04-28 12:34:03] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0xa4c138ddf18abbdd', payload '{"child_lock":"UNLOCK","countdown":0,"current":0,"energy":249.15,"indicator_mode":"off/on","linkquality":247,"power":0,"power_outage_memory":"restore","state":"ON","voltage":227}'
+[2025-04-28 12:34:03] info: 	z2m: Zigbee2MQTT started!
+[2025-04-28 13:06:13] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0x00158d000394440c"},"type":"device_announced"}'
+[2025-04-28 13:06:13] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0x00158d000394440c","ieee_address":"0x00158d000394440c"},"type":"device_announce"}'
+[2025-04-28 15:14:07] info: 	zh:controller: Interview for '0xa4c138a342088798' started
+[2025-04-28 15:14:07] info: 	z2m: Device '0xa4c138a342088798' joined
+[2025-04-28 15:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":{"friendly_name":"0xa4c138a342088798"},"type":"device_connected"}'
+[2025-04-28 15:14:07] info: 	z2m: Starting interview of '0xa4c138a342088798'
+[2025-04-28 15:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0xa4c138a342088798"},"type":"pairing"}'
+[2025-04-28 15:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138a342088798","ieee_address":"0xa4c138a342088798"},"type":"device_joined"}'
+[2025-04-28 15:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138a342088798","ieee_address":"0xa4c138a342088798","status":"started"},"type":"device_interview"}'
+[2025-04-28 15:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0xa4c138a342088798"},"type":"device_announced"}'
+[2025-04-28 15:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138a342088798","ieee_address":"0xa4c138a342088798"},"type":"device_announce"}'
+[2025-04-28 15:14:42] error: 	zh:controller:device: Read response to 0xa4c138a342088798 failed (ZCL command 0xa4c138a342088798/1 genTime.readRsp({"localTime":799168451}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":88,"writeUndiv":false}) failed (Data request failed with error: 'No network route' (205)))
+[2025-04-28 15:15:32] error: 	zh:controller: Interview failed for '0xa4c138a342088798 with error 'Error: Interview failed because can not get node descriptor ('0xa4c138a342088798')'
+[2025-04-28 15:15:32] error: 	z2m: Failed to interview '0xa4c138a342088798', device has not successfully been paired
+[2025-04-28 15:15:32] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_failed","meta":{"friendly_name":"0xa4c138a342088798"},"type":"pairing"}'
+[2025-04-28 15:15:32] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138a342088798","ieee_address":"0xa4c138a342088798","status":"failed"},"type":"device_interview"}'
+[2025-04-28 16:15:19] info: 	zh:controller: Interview for '0xa4c1381d20404553' started
+[2025-04-28 16:15:19] info: 	z2m: Device '0xa4c1381d20404553' joined
+[2025-04-28 16:15:19] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":{"friendly_name":"0xa4c1381d20404553"},"type":"device_connected"}'
+[2025-04-28 16:15:19] info: 	z2m: Starting interview of '0xa4c1381d20404553'
+[2025-04-28 16:15:19] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0xa4c1381d20404553"},"type":"pairing"}'
+[2025-04-28 16:15:19] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c1381d20404553","ieee_address":"0xa4c1381d20404553"},"type":"device_joined"}'
+[2025-04-28 16:15:19] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c1381d20404553","ieee_address":"0xa4c1381d20404553","status":"started"},"type":"device_interview"}'
+[2025-04-28 16:15:19] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0xa4c1381d20404553"},"type":"device_announced"}'
+[2025-04-28 16:15:19] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c1381d20404553","ieee_address":"0xa4c1381d20404553"},"type":"device_announce"}'
+[2025-04-28 16:16:06] error: 	zh:controller:device: Read response to 0xa4c1381d20404553 failed (ZCL command 0xa4c1381d20404553/1 genTime.readRsp({"localTime":799172125}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":19,"writeUndiv":false}) failed (Data request failed with error: 'No network route' (205)))
+[2025-04-28 16:17:14] error: 	zh:controller: Interview failed for '0xa4c1381d20404553 with error 'Error: Interview failed because can not get node descriptor ('0xa4c1381d20404553')'
+[2025-04-28 16:17:14] error: 	z2m: Failed to interview '0xa4c1381d20404553', device has not successfully been paired
+[2025-04-28 16:17:14] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_failed","meta":{"friendly_name":"0xa4c1381d20404553"},"type":"pairing"}'
+[2025-04-28 16:17:14] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c1381d20404553","ieee_address":"0xa4c1381d20404553","status":"failed"},"type":"device_interview"}'
+[2025-04-29 02:14:07] info: 	z2m: Connected to MQTT server
+[2025-04-29 02:14:07] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+[2025-04-29 03:38:17] error: 	zh:controller:device: Read response to 0xa4c138a342088798 failed (ZCL command 0xa4c138a342088798/1 genTime.readRsp({"localTime":799213076}, {"timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":1,"srcEndpoint":1,"reservedBits":0,"transactionSequenceNumber":89,"writeUndiv":false}) failed (Data request failed with error: 'No network route' (205)))
+[2025-04-29 20:56:05] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-04-30 20:56:05] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-01 20:56:04] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-02 20:56:04] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-03 20:56:04] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-05-04 20:56:04] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'

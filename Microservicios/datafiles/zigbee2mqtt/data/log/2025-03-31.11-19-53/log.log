@@ -1,0 +1,21 @@
+[2025-03-31 11:19:53] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-03-31 11:19:53] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2025-03-31 11:19:53] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2025-03-31 11:19:54] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2025-03-31 11:19:54] info: 	zh:zstack:znp: Serialport opened
+[2025-03-31 11:20:59] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-03-31 11:20:59] error: 	z2m: Error while starting zigbee-herdsman
+[2025-03-31 11:20:59] error: 	z2m: Failed to start zigbee
+[2025-03-31 11:20:59] error: 	z2m: Check https://www.zigbee2mqtt.io/guide/installation/20_zigbee2mqtt-fails-to-start.html for possible solutions
+[2025-03-31 11:20:59] error: 	z2m: Exiting...
+[2025-03-31 11:21:00] error: 	z2m: Error: --> 'SREQ: ZDO - ACTIVE_ENDPOINTS_REQUEST - 00000000' failed with status '(0xc2: NWK_INVALID_REQUEST)'
+    at /app/node_modules/zigbee-herdsman/src/adapter/z-stack/znp/znp.ts:332:23
+    at Queue.execute (/app/node_modules/zigbee-herdsman/src/utils/queue.ts:36:20)
+    at /app/node_modules/zigbee-herdsman/src/adapter/z-stack/adapter/zStackAdapter.ts:389:17
+    at Queue.execute (/app/node_modules/zigbee-herdsman/src/utils/queue.ts:36:20)
+    at ZStackAdapter.sendZdo (/app/node_modules/zigbee-herdsman/src/adapter/z-stack/adapter/zStackAdapter.ts:311:16)
+    at Device.updateActiveEndpoints (/app/node_modules/zigbee-herdsman/src/controller/model/device.ts:1067:26)
+    at Controller.start (/app/node_modules/zigbee-herdsman/src/controller/controller.ts:206:13)
+    at Zigbee.start (/app/lib/zigbee.ts:69:27)
+    at Controller.start (/app/lib/controller.ts:161:27)
+    at start (/app/index.js:154:5)

@@ -1,0 +1,26 @@
+{
+    "0x32d004602bd5b370": {
+        "voltage": 225,
+        "energy": 0,
+        "current": 0,
+        "power": 0,
+        "linkquality": 185,
+        "state": "ON",
+        "countdown": 0,
+        "power_outage_memory": "restore",
+        "indicator_mode": "off/on",
+        "child_lock": "UNLOCK"
+    },
+    "0xa4c138ddf18abbdd": {
+        "state": "ON",
+        "countdown": 0,
+        "power_outage_memory": "restore",
+        "indicator_mode": "off/on",
+        "child_lock": "UNLOCK",
+        "voltage": 223,
+        "energy": 249.19,
+        "power": 0,
+        "current": 0,
+        "linkquality": 233
+    }
+}

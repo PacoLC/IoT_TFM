@@ -1,0 +1,4091 @@
+[
+    {
+        "id": "9133bf4cbcb093ec",
+        "type": "tab",
+        "label": "Principal",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "104c0879a614a61c",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4d486a2f719ad202",
+        "type": "group",
+        "z": "9133bf4cbcb093ec",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1e029b4ed3aed9d9",
+            "3b0b463b103b3ae4",
+            "aaba3162eb75a3e1",
+            "3c046511882d23d0",
+            "d9c07da5bf15e3af",
+            "516db2b0754b9020",
+            "e85c1d09c20ba4a4",
+            "8db682ab8d16acde",
+            "d69650875a8aafe0",
+            "1bcf7f0e7c9b3f8b"
+        ],
+        "x": 1994,
+        "y": 839,
+        "w": 412,
+        "h": 402
+    },
+    {
+        "id": "3ad6994d7a15cc58",
+        "type": "mqtt-broker",
+        "name": "MQTT CASA",
+        "broker": "192.168.1.169",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "adecabe86b5e9d5f",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": "1",
+        "showDisconnectNotification": true
+    },
+    {
+        "id": "32f576e688b57e54",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#283b59",
+            "primary": "#452121",
+            "bgPage": "#0b0909",
+            "groupBg": "#0b0909",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "522f061d308e8a62",
+        "type": "ui-page",
+        "name": "FMS-201",
+        "ui": "adecabe86b5e9d5f",
+        "path": "/FMS201",
+        "icon": "home",
+        "layout": "flex",
+        "theme": "32f576e688b57e54",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "8574772c542404e2",
+        "type": "ui-group",
+        "name": "PLANTA",
+        "page": "522f061d308e8a62",
+        "width": "6",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "033e1a9946a7e0ab",
+        "type": "ui-group",
+        "name": "PANEL",
+        "page": "522f061d308e8a62",
+        "width": "2",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a62e2847ce7c1f5f",
+        "type": "ui-group",
+        "name": "IMG FMS-01",
+        "page": "522f061d308e8a62",
+        "width": "3",
+        "height": "1",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "659d1570971a3230",
+        "type": "ui-group",
+        "name": "TAREAS",
+        "page": "522f061d308e8a62",
+        "width": "3",
+        "height": "1",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "11b487d7c9b72421",
+        "type": "ui-group",
+        "name": "PARAMETROS",
+        "page": "522f061d308e8a62",
+        "width": "6",
+        "height": "1",
+        "order": 5,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3de9a46899431e6d",
+        "type": "ui-spacer",
+        "group": "8574772c542404e2",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 12,
+        "width": "2",
+        "height": "1",
+        "className": ""
+    },
+    {
+        "id": "695bf1e1da47e5ce",
+        "type": "ui-spacer",
+        "group": "8574772c542404e2",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 25,
+        "width": "1",
+        "height": "1",
+        "className": ""
+    },
+    {
+        "id": "236c343b1fef572b",
+        "type": "ui-spacer",
+        "group": "8574772c542404e2",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 29,
+        "width": "2",
+        "height": "1",
+        "className": ""
+    },
+    {
+        "id": "202dec9f64defffe",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "172.16.78.14",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8e9855a9e1ab01eb",
+        "type": "ui-page",
+        "name": "Configuración",
+        "ui": "adecabe86b5e9d5f",
+        "path": "/config",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "32f576e688b57e54",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "80dd6b14f0d7799b",
+        "type": "ui-group",
+        "name": "Compresor",
+        "page": "8e9855a9e1ab01eb",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "07cb2dda8d944292",
+        "type": "ui-spacer",
+        "group": "80dd6b14f0d7799b",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "className": ""
+    },
+    {
+        "id": "3539bd717cb49d40",
+        "type": "inject",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 540,
+        "wires": [
+            [
+                "a46510f90d660761"
+            ]
+        ]
+    },
+    {
+        "id": "a46510f90d660761",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "function 1",
+        "func": "msg.payload = {\n    \"PE\": false, \"SM\": true, \"PM\": false, \"PP\": true, \"POC\": true, \"pp\": false,\n    \"cp0\": false, \"cp1\": false, \"cp2\": true, \"dp\": true, \"a0\": false, \"a1\": false,\n    \"b0\": true, \"b1\": false, \"d0\": true, \"d1\": false, \"e0\": true, \"f0\": true,\n    \"f1\": false, \"pb\": false, \"v1\": false, \"PV\": 2, \"CV\": 0\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 540,
+        "wires": [
+            [
+                "cde98d5b123e2113"
+            ]
+        ]
+    },
+    {
+        "id": "c8ad6a32c9e59e90",
+        "type": "debug",
+        "z": "9133bf4cbcb093ec",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "891164afd84f27c5",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "PE (Pulsador Emergencia)",
+        "group": "033e1a9946a7e0ab",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "label": "Emergencia",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 860,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "32207e6c72853ba7",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "SM (Selector Manual)",
+        "group": "033e1a9946a7e0ab",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "label": "Manual",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 840,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9a64af34a2e82564",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "PM (Marcha)",
+        "group": "033e1a9946a7e0ab",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "label": "Marcha",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 810,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b580fe84425ec616",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "PS (Parada)",
+        "group": "033e1a9946a7e0ab",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "label": "Parada",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cde98d5b123e2113",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Separador de datos",
+        "func": "// Crear un array de mensajes para cada salida\n\nlet cp0 = msg.payload.cp0 ? 1 : 0;\nlet cp1 = msg.payload.cp1 ? 1 : 0;\nlet cp2 = msg.payload.cp2 ? 1 : 0;\n\n// Formamos la cadena binaria\nlet binaryStr = `${cp2}${cp1}${cp0}`;\n\n// Convertimos a decimal\nlet decimalValue = parseInt(binaryStr, 2);\n\nlet outputs = [\n    { payload: msg.payload.PE },\n    { payload: msg.payload.SM },\n    { payload: msg.payload.PM },\n    { payload: msg.payload.PS }, //CAMBIARLO A PS (PP)\n    { payload: msg.payload.POC },\n    { payload: msg.payload.pp },\n    { payload: msg.payload.cp0 },\n    { payload: msg.payload.cp1 },\n    { payload: msg.payload.cp2 },\n    { payload: msg.payload.dp },\n    { payload: msg.payload.a0 },\n    { payload: msg.payload.a1 },\n    { payload: msg.payload.b0 },\n    { payload: msg.payload.b1 },\n    { payload: msg.payload.d0 },\n    { payload: msg.payload.d1 },\n    { payload: msg.payload.e0 },\n    { payload: msg.payload.f0 },\n    { payload: msg.payload.f1 },\n    { payload: msg.payload.pb },\n    { payload: msg.payload.v1 },\n    { payload: msg.payload.P },\n    { payload: msg.payload.C },\n    { payload: msg.payload.R },\n    { payload: msg.payload.N },\n    { payload: decimalValue }\n];\n\n// Retornar como array de mensajes para las 23 salidas\nreturn outputs;\n",
+        "outputs": 26,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "891164afd84f27c5"
+            ],
+            [
+                "32207e6c72853ba7"
+            ],
+            [
+                "9a64af34a2e82564"
+            ],
+            [
+                "b580fe84425ec616"
+            ],
+            [
+                "6bd8ff0af8adf4c7"
+            ],
+            [
+                "2d2c07cbef2cb32d"
+            ],
+            [
+                "4291feaa686b9fa9"
+            ],
+            [
+                "8184c0ecc00bc103"
+            ],
+            [
+                "83d1ac745c72f782"
+            ],
+            [
+                "2c5776ede7884e17"
+            ],
+            [
+                "a16545b9bfe74f11"
+            ],
+            [
+                "9481b5c288292663"
+            ],
+            [
+                "ea8786049bf6167b"
+            ],
+            [
+                "26ae07a458efc67f"
+            ],
+            [
+                "0e941122421b4dd0"
+            ],
+            [
+                "b747f66353e75bb3"
+            ],
+            [
+                "0f9b506b3c2a9fd9"
+            ],
+            [
+                "84830298c4f19d0f"
+            ],
+            [
+                "b682158920b98247"
+            ],
+            [
+                "a398078eea71c5e6"
+            ],
+            [
+                "a416a896dd7364a8"
+            ],
+            [
+                "4213945b60c7d753"
+            ],
+            [
+                "7a8d0b46bba25f7d"
+            ],
+            [
+                "44b129cac01e7896"
+            ],
+            [
+                "c18aec65e09a3933"
+            ],
+            [
+                "2f68fc2df96b2516"
+            ]
+        ]
+    },
+    {
+        "id": "6bd8ff0af8adf4c7",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "POC (Conectada)",
+        "group": "033e1a9946a7e0ab",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "label": "Conectada",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 830,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2d2c07cbef2cb32d",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "pp (Cinta Motor)",
+        "group": "8574772c542404e2",
+        "order": 31,
+        "width": "3",
+        "height": "1",
+        "label": "Cinta motor",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4291feaa686b9fa9",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "cp0 (Codigo Palé)",
+        "group": "8574772c542404e2",
+        "order": 35,
+        "width": "3",
+        "height": "1",
+        "label": "Código palé",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 830,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8184c0ecc00bc103",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "cp1",
+        "group": "8574772c542404e2",
+        "order": 36,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2c5776ede7884e17",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "dp (Presión)",
+        "group": "033e1a9946a7e0ab",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "label": "Presión",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a16545b9bfe74f11",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "a0 (Descargador HZ)",
+        "group": "8574772c542404e2",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "label": "Descargador Hz",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 840,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "83d1ac745c72f782",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "cp2",
+        "group": "8574772c542404e2",
+        "order": 37,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9481b5c288292663",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "a1",
+        "group": "8574772c542404e2",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ea8786049bf6167b",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "b0 (Descargador Vt)",
+        "group": "8574772c542404e2",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "label": "Descargador Vt",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 840,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "26ae07a458efc67f",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "b1",
+        "group": "8574772c542404e2",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0e941122421b4dd0",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "d0 (Verificador)",
+        "group": "8574772c542404e2",
+        "order": 14,
+        "width": "3",
+        "height": "1",
+        "label": "Verificador",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 820,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b747f66353e75bb3",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "d1",
+        "group": "8574772c542404e2",
+        "order": 15,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0f9b506b3c2a9fd9",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "e0 (Desplazador)",
+        "group": "8574772c542404e2",
+        "order": 17,
+        "width": "3",
+        "height": "1",
+        "label": "Desplazador",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 830,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "84830298c4f19d0f",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "f0 (Alimentador)",
+        "group": "8574772c542404e2",
+        "order": 20,
+        "width": "3",
+        "height": "1",
+        "label": "Alimentador",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 820,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b682158920b98247",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "f1",
+        "group": "8574772c542404e2",
+        "order": 21,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "a398078eea71c5e6",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "pb (Presencia Base Alimentador)",
+        "group": "8574772c542404e2",
+        "order": 23,
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 880,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a416a896dd7364a8",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "v1 (Descargador Eyector)",
+        "group": "8574772c542404e2",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "label": "Descargador Eyector",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 850,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2680a8ffa71dede1",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "function 3",
+        "func": "msg.payload = { \"DPO\": false, \"LA\": false, \"LM\": false, \"FM\": false, \"RUN\": false, \"REV\": false, \"R1\": false, \"S1\": false, \"AS\": false, \"A1\": false, \"A0\": false, \"B1\": false, \"C1\": false, \"D1\": false, \"E1\": false, \"F1\": false, \"V1\": false };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1700,
+        "wires": [
+            [
+                "04e9550bf78b7c3b"
+            ]
+        ]
+    },
+    {
+        "id": "d5e7803fb485770a",
+        "type": "inject",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1700,
+        "wires": [
+            [
+                "2680a8ffa71dede1"
+            ]
+        ]
+    },
+    {
+        "id": "04e9550bf78b7c3b",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Separador de datos",
+        "func": "// Crear un array de mensajes para cada salida\nlet outputs = [\n    { payload: msg.payload.DPO },\n    { payload: msg.payload.LA },\n    { payload: msg.payload.LM },\n    { payload: msg.payload.FM },\n    { payload: msg.payload.PAUSA },\n    { payload: msg.payload.RESET },\n    { payload: msg.payload.CI },\n    { payload: msg.payload.CM },\n    { payload: msg.payload.RUN },\n    { payload: msg.payload.REV },\n    { payload: msg.payload.R1 },\n    { payload: msg.payload.S1 },\n    { payload: msg.payload.AS },\n    { payload: msg.payload.A1 },\n    { payload: msg.payload.A0 },\n    { payload: msg.payload.B1 },\n    { payload: msg.payload.C1 },\n    { payload: msg.payload.D1 },\n    { payload: msg.payload.E1 },\n    { payload: msg.payload.F1 },\n    { payload: msg.payload.V1 }\n];\n\n// Retornar como array de mensajes para las 17 salidas\nreturn outputs;\n",
+        "outputs": 21,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1620,
+        "wires": [
+            [
+                "d1108f356f8e8261"
+            ],
+            [
+                "71bd3adf31280810"
+            ],
+            [
+                "bc2827427bf89a8a"
+            ],
+            [
+                "1dc344ecefd27b3e"
+            ],
+            [
+                "17bcf97251a096a3"
+            ],
+            [
+                "adbae1fee4994d93"
+            ],
+            [
+                "ab64f413dfaf4c20"
+            ],
+            [
+                "59667ca6f0ea0c40"
+            ],
+            [
+                "e90e96a0ca7db994"
+            ],
+            [
+                "ede30f6645da8eeb"
+            ],
+            [
+                "2cb0ce75bbfa6df5"
+            ],
+            [
+                "fcaf10d8351c340c"
+            ],
+            [
+                "56c5b5977bb533cc"
+            ],
+            [
+                "a3537cfab9c39b93"
+            ],
+            [
+                "fbcdd791b775d329"
+            ],
+            [
+                "10a00a5eb2d232ca"
+            ],
+            [
+                "f307a1eed29093fe"
+            ],
+            [
+                "3a8897304b0cd10f"
+            ],
+            [
+                "9a9a30135cf8903f"
+            ],
+            [
+                "d90f333660ca7c7a"
+            ],
+            [
+                "0e908b035953c32d"
+            ]
+        ]
+    },
+    {
+        "id": "1e029b4ed3aed9d9",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Pon 0 encima del led",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "head": "",
+        "format": "<div style=\"position: absolute; top: -150px; left: -35px; font-size: 18px;\">\n  0\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2120,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b0b463b103b3ae4",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Pon 1 encima del led",
+        "order": 18,
+        "width": "1",
+        "height": "1",
+        "head": "",
+        "format": "<div style=\"position: absolute; top: -330px; left: 60px; font-size: 18px;\">\n  1\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2120,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a8d0b46bba25f7d",
+        "type": "ui-text",
+        "z": "9133bf4cbcb093ec",
+        "group": "659d1570971a3230",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "CV (Unidades Pendientes)",
+        "label": "Unidades Pendientes",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "19",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 860,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "aaba3162eb75a3e1",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "",
+        "page": "",
+        "ui": "adecabe86b5e9d5f",
+        "name": "Logo Top Bar",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <img src=\"/logo.jpg\" class=\"custom-logo\" />\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false\n            }\n        },\n        mounted() {\n            this.mounted = true; // Establece el flag 'mounted' como verdadero para que el Teleport se renderice\n        }\n    }\n</script>\n\n<style scoped>\n    .custom-logo {\n        height: 110px;\n        /* Ajusta el tamaño del logo */\n        max-width: 250px;\n        margin-right: 60px;\n        /* Espacio entre el logo y el título */\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "x": 2130,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44b129cac01e7896",
+        "type": "ui-text",
+        "z": "9133bf4cbcb093ec",
+        "group": "659d1570971a3230",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "CR (Unidades Realizadas)",
+        "label": "Unidades Realizadas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "19",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 860,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c18aec65e09a3933",
+        "type": "ui-text",
+        "z": "9133bf4cbcb093ec",
+        "group": "659d1570971a3230",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "CN (Unidades Rechazadas)",
+        "label": "Unidades Rechazadas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "19",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 860,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "71bd3adf31280810",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (LA)",
+        "func": "let valor = global.get(\"LA_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"LA_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"LA_global\", true);\n}\n\nvalor = global.get(\"LA_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1200,
+        "wires": [
+            [
+                "95d602e001e749a8"
+            ]
+        ]
+    },
+    {
+        "id": "95d602e001e749a8",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "033e1a9946a7e0ab",
+        "name": "LA (Lampara Alarma)",
+        "label": "Lámpara Alarma",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1120,
+        "y": 1200,
+        "wires": [
+            [
+                "8e7bb51ae64d6870",
+                "71bd3adf31280810"
+            ]
+        ]
+    },
+    {
+        "id": "8e7bb51ae64d6870",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (LA)",
+        "func": "let valor = global.get(\"LA_global\");\nglobal.set(\"LA_global\", !valor);\nmsg.payload = { LA: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1200,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "d1108f356f8e8261",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (DP0)",
+        "func": "let valor = global.get(\"DP0_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"DP0_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"DP0_global\", true);\n}\n\nvalor = global.get(\"DP0_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1140,
+        "wires": [
+            [
+                "4f6d9fade97d91f2"
+            ]
+        ]
+    },
+    {
+        "id": "4f6d9fade97d91f2",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "033e1a9946a7e0ab",
+        "name": "DP0 (Desconecta)",
+        "label": "Desconecta",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1110,
+        "y": 1140,
+        "wires": [
+            [
+                "3be6946319fbe348",
+                "d1108f356f8e8261"
+            ]
+        ]
+    },
+    {
+        "id": "3be6946319fbe348",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (DP0)",
+        "func": "let valor = global.get(\"DP0_global\");\nglobal.set(\"DP0_global\", !valor);\nmsg.payload = { DP0: !valor};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1140,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "bc2827427bf89a8a",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (LM)",
+        "func": "let valor = global.get(\"LM_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"LM_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"LM_global\", true);\n}\n\nvalor = global.get(\"LM_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1260,
+        "wires": [
+            [
+                "9bb3f57177cb8e8a"
+            ]
+        ]
+    },
+    {
+        "id": "9bb3f57177cb8e8a",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "033e1a9946a7e0ab",
+        "name": "LM (Lampara Marcha)",
+        "label": "Lámpara Marcha",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1120,
+        "y": 1260,
+        "wires": [
+            [
+                "606048e1a12e6067",
+                "bc2827427bf89a8a"
+            ]
+        ]
+    },
+    {
+        "id": "606048e1a12e6067",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (LM)",
+        "func": "let valor = global.get(\"LM_global\");\nglobal.set(\"LM_global\", !valor);\nmsg.payload = { LM: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1260,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "56c5b5977bb533cc",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (AS)",
+        "func": "let valor = global.get(\"AS_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"AS_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"AS_global\", true);\n}\n\nvalor = global.get(\"AS_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1820,
+        "wires": [
+            [
+                "732148e6406fac72"
+            ]
+        ]
+    },
+    {
+        "id": "732148e6406fac72",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "033e1a9946a7e0ab",
+        "name": "AS (Alarma Sonora)",
+        "label": "Alarma Sonora",
+        "order": 10,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1120,
+        "y": 1820,
+        "wires": [
+            [
+                "73d487f70f8f71e5",
+                "56c5b5977bb533cc"
+            ]
+        ]
+    },
+    {
+        "id": "73d487f70f8f71e5",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (AS)",
+        "func": "let valor = global.get(\"AS_global\");\nglobal.set(\"AS_global\", !valor);\nmsg.payload = { AS: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1820,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "1dc344ecefd27b3e",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (FM)",
+        "func": "let valor = global.get(\"FM_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"FM_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"FM_global\", true);\n}\n\nvalor = global.get(\"FM_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1320,
+        "wires": [
+            [
+                "5d88e88e45bf5138"
+            ]
+        ]
+    },
+    {
+        "id": "5d88e88e45bf5138",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "033e1a9946a7e0ab",
+        "name": "FM (Falta Material)",
+        "label": "Falta Material",
+        "order": 11,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1110,
+        "y": 1320,
+        "wires": [
+            [
+                "42f4d80b4065b7f8",
+                "1dc344ecefd27b3e"
+            ]
+        ]
+    },
+    {
+        "id": "42f4d80b4065b7f8",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (FM)",
+        "func": "let valor = global.get(\"FM_global\");\nglobal.set(\"FM_global\", !valor);\nmsg.payload = { FM: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1320,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "e90e96a0ca7db994",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (RUN)",
+        "func": "let valor = global.get(\"RUN_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"RUN_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"RUN_global\", true);\n}\n\nvalor = global.get(\"RUN_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1580,
+        "wires": [
+            [
+                "5da5eb0e92872e3a"
+            ]
+        ]
+    },
+    {
+        "id": "5da5eb0e92872e3a",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "RUN (Cinta motor Activa)",
+        "label": "Activa",
+        "order": 33,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1130,
+        "y": 1580,
+        "wires": [
+            [
+                "8f3b812c011b7e0c",
+                "e90e96a0ca7db994"
+            ]
+        ]
+    },
+    {
+        "id": "8f3b812c011b7e0c",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (RUN)",
+        "func": "let valor = global.get(\"RUN_global\");\nglobal.set(\"RUN_global\", !valor);\nmsg.payload = { RUN: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1580,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "ede30f6645da8eeb",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (REV)",
+        "func": "let valor = global.get(\"REV_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"REV_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"REV_global\", true);\n}\n\nvalor = global.get(\"REV_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1640,
+        "wires": [
+            [
+                "03d7c25118281cb3"
+            ]
+        ]
+    },
+    {
+        "id": "03d7c25118281cb3",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "REV(Cinta motor Invierte)",
+        "label": "Invierte",
+        "order": 34,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1130,
+        "y": 1640,
+        "wires": [
+            [
+                "a4ce88b2a2fd157e",
+                "ede30f6645da8eeb"
+            ]
+        ]
+    },
+    {
+        "id": "a4ce88b2a2fd157e",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (REV)",
+        "func": "let valor = global.get(\"REV_global\");\nglobal.set(\"REV_global\", !valor);\nmsg.payload = { REV: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1640,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "2cb0ce75bbfa6df5",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (R1)",
+        "func": "let valor = global.get(\"R1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"R1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"R1_global\", true);\n}\n\nvalor = global.get(\"R1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1700,
+        "wires": [
+            [
+                "7f29e2e74a2ae5ae"
+            ]
+        ]
+    },
+    {
+        "id": "7f29e2e74a2ae5ae",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "R1 (+ Retenedor Baja)",
+        "label": "+",
+        "order": 27,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1120,
+        "y": 1700,
+        "wires": [
+            [
+                "3b2c9b662816e802",
+                "2cb0ce75bbfa6df5"
+            ]
+        ]
+    },
+    {
+        "id": "3b2c9b662816e802",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (R1)",
+        "func": "let valor = global.get(\"R1_global\");\nglobal.set(\"R1_global\", !valor);\nmsg.payload = { R1: !valor};;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1700,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "fcaf10d8351c340c",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (S1)",
+        "func": "let valor = global.get(\"S1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"S1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"S1_global\", true);\n}\n\nvalor = global.get(\"S1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1760,
+        "wires": [
+            [
+                "bf66cd91bd701d45"
+            ]
+        ]
+    },
+    {
+        "id": "bf66cd91bd701d45",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "S1 (+ Separador Sube)",
+        "label": "+",
+        "order": 30,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1130,
+        "y": 1760,
+        "wires": [
+            [
+                "6109198e462d6d9e",
+                "fcaf10d8351c340c"
+            ]
+        ]
+    },
+    {
+        "id": "6109198e462d6d9e",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (S1)",
+        "func": "let valor = global.get(\"S1_global\");\nglobal.set(\"S1_global\", !valor);\nmsg.payload = { S1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1760,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "a3537cfab9c39b93",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (A1)",
+        "func": "let valor = global.get(\"A1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"A1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"A1_global\", true);\n}\n\nvalor = global.get(\"A1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1880,
+        "wires": [
+            [
+                "2b6959816d3f4c86"
+            ]
+        ]
+    },
+    {
+        "id": "2b6959816d3f4c86",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "A1 (+ Descargador Avanza)",
+        "label": "+",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1140,
+        "y": 1880,
+        "wires": [
+            [
+                "f0def60a5be242b5",
+                "a3537cfab9c39b93"
+            ]
+        ]
+    },
+    {
+        "id": "f0def60a5be242b5",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (A1)",
+        "func": "let valor = global.get(\"A1_global\");\nglobal.set(\"A1_global\", !valor);\nmsg.payload = { A1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1880,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "fbcdd791b775d329",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (A0)",
+        "func": "let valor = global.get(\"A0_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"A0_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"A0_global\", true);\n}\n\nvalor = global.get(\"A0_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1940,
+        "wires": [
+            [
+                "623fd6d44e358b98"
+            ]
+        ]
+    },
+    {
+        "id": "623fd6d44e358b98",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "A0 (- Descargador Retrocede)",
+        "label": "-",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1150,
+        "y": 1940,
+        "wires": [
+            [
+                "eb5f7f91677cfefd",
+                "fbcdd791b775d329"
+            ]
+        ]
+    },
+    {
+        "id": "eb5f7f91677cfefd",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (A0)",
+        "func": "let valor = global.get(\"A0_global\");\nglobal.set(\"A0_global\", !valor);\nmsg.payload = { A0: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1940,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "10a00a5eb2d232ca",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (B1)",
+        "func": "let valor = global.get(\"B1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"B1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"B1_global\", true);\n}\n\nvalor = global.get(\"B1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2000,
+        "wires": [
+            [
+                "4ea7899b21344611"
+            ]
+        ]
+    },
+    {
+        "id": "4ea7899b21344611",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "B1 (+ Descargador Baja)",
+        "label": "+",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1130,
+        "y": 2000,
+        "wires": [
+            [
+                "e15a55c7a694e5ce",
+                "10a00a5eb2d232ca"
+            ]
+        ]
+    },
+    {
+        "id": "e15a55c7a694e5ce",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (B1)",
+        "func": "let valor = global.get(\"B1_global\");\nglobal.set(\"B1_global\", !valor);\nmsg.payload = { B1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 2000,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "f307a1eed29093fe",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (C1)",
+        "func": "let valor = global.get(\"C1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"C1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"C1_global\", true);\n}\n\nvalor = global.get(\"C1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2060,
+        "wires": [
+            [
+                "3ea9705e591fbe21"
+            ]
+        ]
+    },
+    {
+        "id": "3ea9705e591fbe21",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "C1 (+ Rechazador Avanza)",
+        "label": "+",
+        "order": 13,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1140,
+        "y": 2060,
+        "wires": [
+            [
+                "f81529b1f8618de2",
+                "f307a1eed29093fe"
+            ]
+        ]
+    },
+    {
+        "id": "f81529b1f8618de2",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (C1)",
+        "func": "let valor = global.get(\"C1_global\");\nglobal.set(\"C1_global\", !valor);\nmsg.payload = { C1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 2060,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "3a8897304b0cd10f",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (D1)",
+        "func": "let valor = global.get(\"D1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"D1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"D1_global\", true);\n}\n\nvalor = global.get(\"D1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2120,
+        "wires": [
+            [
+                "845de5b7ef7f5b3c"
+            ]
+        ]
+    },
+    {
+        "id": "845de5b7ef7f5b3c",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "D1 (+ Verificador Baja)",
+        "label": "+",
+        "order": 16,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1120,
+        "y": 2120,
+        "wires": [
+            [
+                "8a76f10b33fc59fd",
+                "3a8897304b0cd10f"
+            ]
+        ]
+    },
+    {
+        "id": "8a76f10b33fc59fd",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (D1)",
+        "func": "let valor = global.get(\"D1_global\");\nglobal.set(\"D1_global\", !valor);\nmmsg.payload = { D1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 2120,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "9a9a30135cf8903f",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (E1)",
+        "func": "let valor = global.get(\"E1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"E1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"E1_global\", true);\n}\n\nvalor = global.get(\"E1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2180,
+        "wires": [
+            [
+                "1fa28b36755c5a77"
+            ]
+        ]
+    },
+    {
+        "id": "1fa28b36755c5a77",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "E1 (+ Desplazador Avanza)",
+        "label": "+",
+        "order": 19,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1140,
+        "y": 2180,
+        "wires": [
+            [
+                "3f2707c19f6aa7ac",
+                "9a9a30135cf8903f"
+            ]
+        ]
+    },
+    {
+        "id": "3f2707c19f6aa7ac",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (E1)",
+        "func": "let valor = global.get(\"E1_global\");\nglobal.set(\"E1_global\", !valor);\nmsg.payload = { E1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 2180,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "2c597cde3b1387cc",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "F1 (+ Alimentador Avanza)",
+        "label": "+",
+        "order": 22,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1140,
+        "y": 2240,
+        "wires": [
+            [
+                "a26eed6e3a0e666a",
+                "d90f333660ca7c7a"
+            ]
+        ]
+    },
+    {
+        "id": "a26eed6e3a0e666a",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (F1)",
+        "func": "let valor = global.get(\"F1_global\");\nglobal.set(\"F1_global\", !valor);\nmsg.payload = { F1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 2240,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "d90f333660ca7c7a",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (F1)",
+        "func": "let valor = global.get(\"F1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"F1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"F1_global\", true);\n}\n\nvalor = global.get(\"F1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2240,
+        "wires": [
+            [
+                "2c597cde3b1387cc"
+            ]
+        ]
+    },
+    {
+        "id": "66d7de0f40a1fecc",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "name": "V1 (+ Descargador Succiona)",
+        "label": "+",
+        "order": 10,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1150,
+        "y": 2300,
+        "wires": [
+            [
+                "1165ca8295d4f5fc",
+                "0e908b035953c32d"
+            ]
+        ]
+    },
+    {
+        "id": "1165ca8295d4f5fc",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (V1)",
+        "func": "let valor = global.get(\"V1_global\");\nglobal.set(\"V1_global\", !valor);\nmsg.payload = { V1: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 2300,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "0e908b035953c32d",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (V1)",
+        "func": "let valor = global.get(\"V1_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"V1_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"V1_global\", true);\n}\n\nvalor = global.get(\"V1_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2300,
+        "wires": [
+            [
+                "66d7de0f40a1fecc"
+            ]
+        ]
+    },
+    {
+        "id": "3c046511882d23d0",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Pon pp encima del led",
+        "order": 32,
+        "width": "1",
+        "height": "1",
+        "head": "",
+        "format": "<div style=\"position: absolute; top: 14px; left: -36px; font-size: 14px; color: black; font-weight: bold;\">\n  pp\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2120,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9c07da5bf15e3af",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Texto Rechazador C",
+        "order": 11,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<label class=\"nrdb-ui-led-label v-label\" style=\"justify-content: left;\">Rechazador</label>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2120,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "516db2b0754b9020",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Texto Cinta Retenedor R",
+        "order": 24,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<label class=\"nrdb-ui-led-label v-label\" style=\"justify-content: left;\">Cinta Retenedor</label>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2130,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e85c1d09c20ba4a4",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Texto Cinta Separador S",
+        "order": 28,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<label class=\"nrdb-ui-led-label v-label\" style=\"justify-content: left;\">Cinta Separador</label>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2130,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8db682ab8d16acde",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "8574772c542404e2",
+        "page": "",
+        "ui": "",
+        "name": "Pon pb encima del led",
+        "order": 26,
+        "width": "1",
+        "height": "1",
+        "head": "",
+        "format": "<div style=\"position: absolute; top: -45px; left: 241px; font-size: 14px; color: black; font-weight: bold;\">\n  pb\n</div>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2120,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d69650875a8aafe0",
+        "type": "comment",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "name": "Antes 148",
+        "info": "",
+        "x": 2320,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "1bcf7f0e7c9b3f8b",
+        "type": "ui-template",
+        "z": "9133bf4cbcb093ec",
+        "g": "4d486a2f719ad202",
+        "group": "a62e2847ce7c1f5f",
+        "page": "",
+        "ui": "",
+        "name": "IMAGEN",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<img src=\"/FMS201.jpeg\" style=\"width: 100%; max-width: 300px;\">\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2120,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85925443becfd3c9",
+        "type": "ui-text-input",
+        "z": "9133bf4cbcb093ec",
+        "group": "659d1570971a3230",
+        "name": "PV (Unidades Solicitadas)",
+        "label": "Solicitar Unidades",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1230,
+        "y": 560,
+        "wires": [
+            [
+                "bab733517dde33b5"
+            ]
+        ]
+    },
+    {
+        "id": "2f68fc2df96b2516",
+        "type": "ui-text",
+        "z": "9133bf4cbcb093ec",
+        "group": "8574772c542404e2",
+        "order": 38,
+        "width": "1",
+        "height": "1",
+        "name": "Código Palé",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 810,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "bab733517dde33b5",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "PV",
+        "func": "// Convertir el payload a número\nlet valor = Number(msg.payload);\nmsg.payload = { PV: valor };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 560,
+        "wires": [
+            [
+                "320784a3fa05b525",
+                "fde95bd6c14b8ea5"
+            ]
+        ]
+    },
+    {
+        "id": "320784a3fa05b525",
+        "type": "mqtt out",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "topic": "FMS201/DashBoard",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "202dec9f64defffe",
+        "x": 1640,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3186a37d3f20456f",
+        "type": "mqtt out",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "topic": "FMS201/DashBoard",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "202dec9f64defffe",
+        "x": 1840,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "e379e0014d32bbf4",
+        "type": "debug",
+        "z": "9133bf4cbcb093ec",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "21e42a204cfe3720",
+        "type": "mqtt in",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "topic": "FMS201/E",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "202dec9f64defffe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 440,
+        "wires": [
+            [
+                "f9488b4f97cd6ab4"
+            ]
+        ]
+    },
+    {
+        "id": "3e14959444bafeae",
+        "type": "mqtt in",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "topic": "FMS201/S",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "202dec9f64defffe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 1620,
+        "wires": [
+            [
+                "5d4c78afb7cd4218"
+            ]
+        ]
+    },
+    {
+        "id": "b9d47a5be4920f90",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "11b487d7c9b72421",
+        "name": "Reset",
+        "label": "Reset",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1070,
+        "y": 1440,
+        "wires": [
+            [
+                "75bec937a354309b",
+                "adbae1fee4994d93"
+            ]
+        ]
+    },
+    {
+        "id": "75bec937a354309b",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (RESET)",
+        "func": "let valor = global.get(\"RESET_global\");\nglobal.set(\"RESET_global\", !valor);\nmsg.payload = { RESET: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1440,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "adbae1fee4994d93",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (RESET)",
+        "func": "let valor = global.get(\"RESET_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"RESET_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"RESET_global\", true);\n}\n\nvalor = global.get(\"RESET_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1440,
+        "wires": [
+            [
+                "b9d47a5be4920f90"
+            ]
+        ]
+    },
+    {
+        "id": "ca8c7f12ca5af8de",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "11b487d7c9b72421",
+        "name": "Pausa",
+        "label": "Pausa",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1070,
+        "y": 1380,
+        "wires": [
+            [
+                "67e94dfd1f9cbc90",
+                "17bcf97251a096a3"
+            ]
+        ]
+    },
+    {
+        "id": "17bcf97251a096a3",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (PAUSA)",
+        "func": "let valor = global.get(\"PAUSA_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"PAUSA_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"PAUSA_global\", true);\n}\n\nvalor = global.get(\"PAUSA_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1380,
+        "wires": [
+            [
+                "ca8c7f12ca5af8de"
+            ]
+        ]
+    },
+    {
+        "id": "67e94dfd1f9cbc90",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (PAUSA)",
+        "func": "let valor = global.get(\"PAUSA_global\");\nglobal.set(\"PAUSA_global\", !valor);\nmsg.payload = { PAUSA: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1380,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "ab64f413dfaf4c20",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "CI",
+        "group": "11b487d7c9b72421",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "label": "Cond. Iniciales",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-end",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 770,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "59667ca6f0ea0c40",
+        "type": "ui-led",
+        "z": "9133bf4cbcb093ec",
+        "name": "CM",
+        "group": "11b487d7c9b72421",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "label": "Cond. Marcha",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-end",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#c8c8c8"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#ffff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 770,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "6dd25884bf2f9f96",
+        "type": "mqtt in",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "202dec9f64defffe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1430,
+        "y": 860,
+        "wires": [
+            [
+                "e379e0014d32bbf4"
+            ]
+        ]
+    },
+    {
+        "id": "2a277e8d2ad36b09",
+        "type": "json",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "cde98d5b123e2113",
+                "c8ad6a32c9e59e90"
+            ]
+        ]
+    },
+    {
+        "id": "f9488b4f97cd6ab4",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "parser",
+        "func": "let str = msg.payload.toString();\n\n// Elimina espacios antes y después\nstr = str.trim();\n\n// Encuentra el cierre del JSON (último \"}\")\nlet endIndex = str.lastIndexOf(\"}\");\n\nif (endIndex !== -1) {\n    str = str.substring(0, endIndex + 1); // recorta solo hasta el final del JSON válido\n}\n\nmsg.payload = str;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "2a277e8d2ad36b09"
+            ]
+        ]
+    },
+    {
+        "id": "e2ecdeb04b8b80f0",
+        "type": "debug",
+        "z": "9133bf4cbcb093ec",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "89296142d40adf1c",
+        "type": "json",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 330,
+        "y": 1620,
+        "wires": [
+            [
+                "e2ecdeb04b8b80f0",
+                "04e9550bf78b7c3b"
+            ]
+        ]
+    },
+    {
+        "id": "5d4c78afb7cd4218",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "parser",
+        "func": "let str = msg.payload.toString();\n\n// Elimina espacios antes y después\nstr = str.trim();\n\n// Encuentra el cierre del JSON (último \"}\")\nlet endIndex = str.lastIndexOf(\"}\");\n\nif (endIndex !== -1) {\n    str = str.substring(0, endIndex + 1); // recorta solo hasta el final del JSON válido\n}\n\nmsg.payload = str;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1620,
+        "wires": [
+            [
+                "89296142d40adf1c"
+            ]
+        ]
+    },
+    {
+        "id": "4213945b60c7d753",
+        "type": "ui-text",
+        "z": "9133bf4cbcb093ec",
+        "group": "659d1570971a3230",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "PV (Unidades Solicitas vista)",
+        "label": "Unidades Solicitadas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "19",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 860,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7152238179f881df",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "clean",
+        "func": "msg.payload=[];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 640,
+        "wires": [
+            [
+                "85925443becfd3c9"
+            ]
+        ]
+    },
+    {
+        "id": "fde95bd6c14b8ea5",
+        "type": "delay",
+        "z": "9133bf4cbcb093ec",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1400,
+        "y": 640,
+        "wires": [
+            [
+                "7152238179f881df"
+            ]
+        ]
+    },
+    {
+        "id": "e8be6380a84b9dbc",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "selector de color boton (Manual)",
+        "func": "let valor = global.get(\"Manual_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"Manual_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"Manual_global\", true);\n}\n\nvalor = global.get(\"Manual_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1080,
+        "wires": [
+            [
+                "10a2feeb9028fe8f"
+            ]
+        ]
+    },
+    {
+        "id": "10a2feeb9028fe8f",
+        "type": "ui-button",
+        "z": "9133bf4cbcb093ec",
+        "group": "033e1a9946a7e0ab",
+        "name": "Manual (Manual)",
+        "label": "Manual ",
+        "order": 12,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1110,
+        "y": 1080,
+        "wires": [
+            [
+                "480f57013bba2e9a",
+                "e8be6380a84b9dbc"
+            ]
+        ]
+    },
+    {
+        "id": "480f57013bba2e9a",
+        "type": "function",
+        "z": "9133bf4cbcb093ec",
+        "name": "Cambio de estado (Manual)",
+        "func": "let valor = global.get(\"Manual_global\");\nglobal.set(\"Manual_global\", !valor);\nmsg.payload = { SM: !valor};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 1080,
+        "wires": [
+            [
+                "3186a37d3f20456f"
+            ]
+        ]
+    },
+    {
+        "id": "ce80e1f1e0287869",
+        "type": "debug",
+        "z": "104c0879a614a61c",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6d83731ebf5848e5",
+        "type": "function",
+        "z": "104c0879a614a61c",
+        "name": "selector de color boton (Compresor)",
+        "func": "let valor = global.get(\"Compresor_global\");\n\nif (msg.payload == false) \n{\n    global.set(\"Compresor_global\", false);\n}\nelse if (msg.payload == true)\n{\n    global.set(\"Compresor_global\", true);\n}\n\nvalor = global.get(\"Compresor_global\");\n\nif (valor == true)\n{\n    msg.ui_update = {buttonColor : \"green\"};\n}\nelse if (valor == false)\n{\n    msg.ui_update = {buttonColor : \"red\"};\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 600,
+        "wires": [
+            [
+                "02b3e0660349ac68"
+            ]
+        ]
+    },
+    {
+        "id": "02b3e0660349ac68",
+        "type": "ui-button",
+        "z": "104c0879a614a61c",
+        "group": "80dd6b14f0d7799b",
+        "name": "ON/OF",
+        "label": "Compresor",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1240,
+        "y": 600,
+        "wires": [
+            [
+                "6781aeeb5a1d24e0",
+                "6d83731ebf5848e5"
+            ]
+        ]
+    },
+    {
+        "id": "6781aeeb5a1d24e0",
+        "type": "function",
+        "z": "104c0879a614a61c",
+        "name": "Cambio de estado (Compresor)",
+        "func": "let valor = global.get(\"Compresor_global\");\nglobal.set(\"Compresor_global\", !valor);\nmsg.payload = !valor;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 600,
+        "wires": [
+            [
+                "f6352842eb06aa81"
+            ]
+        ]
+    },
+    {
+        "id": "d6d2fb98e2091326",
+        "type": "mqtt in",
+        "z": "104c0879a614a61c",
+        "name": "",
+        "topic": "zigbee2mqtt/Compresor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "202dec9f64defffe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "ce80e1f1e0287869",
+                "2b58c1ba265d7e9a"
+            ]
+        ]
+    },
+    {
+        "id": "877b73b45d5cebfd",
+        "type": "ui-chart",
+        "z": "104c0879a614a61c",
+        "group": "80dd6b14f0d7799b",
+        "name": "",
+        "label": "Energía (kWh)",
+        "order": 6,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 960,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d8d4b8b4f37af03",
+        "type": "ui-gauge",
+        "z": "104c0879a614a61c",
+        "name": "Voltaje",
+        "group": "80dd6b14f0d7799b",
+        "order": 4,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Voltaje",
+        "units": "V",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "240",
+                "color": "#ffc800"
+            },
+            {
+                "from": "245",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "250",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 930,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "55d0e0613c0f0207",
+        "type": "ui-gauge",
+        "z": "104c0879a614a61c",
+        "name": "Potencia",
+        "group": "80dd6b14f0d7799b",
+        "order": 5,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Potencia",
+        "units": "W",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "900",
+                "color": "#ffc800"
+            },
+            {
+                "from": "1300",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "1300",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2b58c1ba265d7e9a",
+        "type": "function",
+        "z": "104c0879a614a61c",
+        "name": "function 4",
+        "func": "// Crear un array de mensajes para cada salida\nlet outputs = [\n    { payload: msg.payload.energy },\n    { payload: msg.payload.power },\n    { payload: msg.payload.voltage },\n    { payload: msg.payload.state }\n];\n\n// Retornar como array de mensajes para las 17 salidas\nreturn outputs;\n\nreturn msg;",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "877b73b45d5cebfd"
+            ],
+            [
+                "55d0e0613c0f0207",
+                "c138410bcbf17668"
+            ],
+            [
+                "9d8d4b8b4f37af03"
+            ],
+            [
+                "2921dd6cce3190a0"
+            ]
+        ]
+    },
+    {
+        "id": "2921dd6cce3190a0",
+        "type": "function",
+        "z": "104c0879a614a61c",
+        "name": "function 6",
+        "func": "if (msg.payload == \"ON\")\n{\n    msg.payload = true;\n}\nelse\n{\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 600,
+        "wires": [
+            [
+                "6d83731ebf5848e5"
+            ]
+        ]
+    },
+    {
+        "id": "efdff6d86f48bb96",
+        "type": "mqtt out",
+        "z": "104c0879a614a61c",
+        "name": "",
+        "topic": "zigbee2mqtt/Compresor/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "202dec9f64defffe",
+        "x": 1320,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f6352842eb06aa81",
+        "type": "function",
+        "z": "104c0879a614a61c",
+        "name": "function 7",
+        "func": "let valor\nif (msg.payload) \n{\n valor = \"ON\";\n}\nelse \n{\n    valor = \"OFF\"\n}\n\nmsg.payload = valor;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 540,
+        "wires": [
+            [
+                "efdff6d86f48bb96"
+            ]
+        ]
+    },
+    {
+        "id": "c138410bcbf17668",
+        "type": "ui-chart",
+        "z": "104c0879a614a61c",
+        "group": "80dd6b14f0d7799b",
+        "name": "",
+        "label": "Potencia (W)",
+        "order": 3,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 950,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e4f70b7b9624074",
+        "type": "function",
+        "z": "104c0879a614a61c",
+        "name": "function 8",
+        "func": "// Generar valores aleatorios\nlet energy = Math.floor(Math.random() * 1000);     // 0 - 999\nlet power = 500+ Math.floor(Math.random() * 500);       // 0 - 499\nlet voltage = (Math.random() * (240 - 210) + 210).toFixed(1); // 210.0 - 240.0\nlet state = Math.random() < 0.5 ? \"OFF\" : \"ON\";     // ON o OFF\n\n// Crear el objeto payload simulado\nmsg.payload = {\n    energy: energy,\n    power: power,\n    voltage: voltage,\n};\n\nreturn msg;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 640,
+        "wires": [
+            [
+                "2b58c1ba265d7e9a"
+            ]
+        ]
+    },
+    {
+        "id": "55f83930b020beda",
+        "type": "inject",
+        "z": "104c0879a614a61c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "877b73b45d5cebfd",
+                "55d0e0613c0f0207",
+                "9d8d4b8b4f37af03",
+                "c138410bcbf17668"
+            ]
+        ]
+    }
+]

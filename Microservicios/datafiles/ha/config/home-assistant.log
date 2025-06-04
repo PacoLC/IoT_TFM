@@ -1,0 +1,4 @@
+2025-06-01 17:34:57.015 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-06-01 17:34:57.018 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-06-01 17:35:00.110 WARNING (Recorder) [homeassistant.components.recorder.util] The system could not validate that the sqlite3 database at //config/home-assistant_v2.db was shutdown cleanly
+2025-06-01 17:35:00.193 WARNING (Recorder) [homeassistant.components.recorder.util] Ended unfinished session (id=32 from 2025-05-28 13:00:04.625385)

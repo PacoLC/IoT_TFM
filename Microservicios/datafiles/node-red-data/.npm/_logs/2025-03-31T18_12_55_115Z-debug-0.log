@@ -1,0 +1,90 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @flowfuse/node-red-dashboard-2-ui-led@1.1.0
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "@flowfuse/node-red-dashboard-2-ui-led@1.1.0"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2025-03-31T18_12_55_115Z-
+10 verbose logfile /data/.npm/_logs/2025-03-31T18_12_55_115Z-debug-0.log
+11 silly packumentCache heap:2038431744 maxSize:509607936 maxEntrySize:254803968
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest @flowfuse/node-red-dashboard-2-ui-led@1.1.0
+16 silly packumentCache full:https://registry.npmjs.org/@flowfuse%2fnode-red-dashboard-2-ui-led cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/@flowfuse%2fnode-red-dashboard-2-ui-led 1826ms (cache updated)
+18 silly packumentCache full:https://registry.npmjs.org/@flowfuse%2fnode-red-dashboard-2-ui-led set size:undefined disposed:false
+19 silly placeDep ROOT @flowfuse/node-red-dashboard-2-ui-led@1.1.0 OK for: node-red-project@0.0.1 want: 1.1.0
+20 silly fetch manifest to-title-case@^1.0.0
+21 silly packumentCache full:https://registry.npmjs.org/to-title-case cache-miss
+22 silly fetch manifest vuex@^4.1.0
+23 silly packumentCache full:https://registry.npmjs.org/vuex cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/vuex 177ms (cache updated)
+25 silly packumentCache full:https://registry.npmjs.org/vuex set size:undefined disposed:false
+26 http fetch GET 200 https://registry.npmjs.org/to-title-case 746ms (cache updated)
+27 silly packumentCache full:https://registry.npmjs.org/to-title-case set size:undefined disposed:false
+28 silly fetch manifest vue@^3.3.8
+29 silly packumentCache full:https://registry.npmjs.org/vue cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/vue 146ms (cache updated)
+31 silly packumentCache full:https://registry.npmjs.org/vue set size:undefined disposed:false
+32 silly fetch manifest typescript@*
+33 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/typescript 672ms (cache updated)
+35 silly packumentCache full:https://registry.npmjs.org/typescript set size:undefined disposed:false
+36 silly placeDep ROOT to-title-case@1.0.0 OK for: @flowfuse/node-red-dashboard-2-ui-led@1.1.0 want: ^1.0.0
+37 silly placeDep ROOT vuex@4.1.0 OK for: @flowfuse/node-red-dashboard-2-ui-led@1.1.0 want: ^4.1.0
+38 silly fetch manifest escape-regexp-component@^1.0.2
+39 silly packumentCache full:https://registry.npmjs.org/escape-regexp-component cache-miss
+40 silly fetch manifest title-case-minors@^1.0.0
+41 silly packumentCache full:https://registry.npmjs.org/title-case-minors cache-miss
+42 silly fetch manifest to-capital-case@^1.0.0
+43 silly packumentCache full:https://registry.npmjs.org/to-capital-case cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/to-capital-case 162ms (cache updated)
+45 silly packumentCache full:https://registry.npmjs.org/to-capital-case set size:undefined disposed:false
+46 silly fetch manifest to-sentence-case@^1.0.0
+47 silly packumentCache full:https://registry.npmjs.org/to-sentence-case cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/escape-regexp-component 631ms (cache updated)
+49 silly packumentCache full:https://registry.npmjs.org/escape-regexp-component set size:undefined disposed:false
+50 silly fetch manifest @vue/devtools-api@^6.0.0-beta.11
+51 silly packumentCache full:https://registry.npmjs.org/@vue%2fdevtools-api cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/title-case-minors 717ms (cache updated)
+53 silly packumentCache full:https://registry.npmjs.org/title-case-minors set size:undefined disposed:false
+54 http fetch GET 200 https://registry.npmjs.org/@vue%2fdevtools-api 93ms (cache updated)
+55 silly packumentCache full:https://registry.npmjs.org/@vue%2fdevtools-api set size:undefined disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/to-sentence-case 608ms (cache updated)
+57 silly packumentCache full:https://registry.npmjs.org/to-sentence-case set size:undefined disposed:false
+58 silly placeDep ROOT escape-regexp-component@1.0.2 OK for: to-title-case@1.0.0 want: ^1.0.2
+59 silly placeDep ROOT title-case-minors@1.0.0 OK for: to-title-case@1.0.0 want: ^1.0.0
+60 silly placeDep ROOT to-capital-case@1.0.0 OK for: to-title-case@1.0.0 want: ^1.0.0
+61 silly placeDep ROOT to-sentence-case@1.0.0 OK for: to-title-case@1.0.0 want: ^1.0.0
+62 silly fetch manifest to-space-case@^1.0.0
+63 silly packumentCache full:https://registry.npmjs.org/to-space-case cache-miss
+64 silly fetch manifest to-no-case@^1.0.0
+65 silly packumentCache full:https://registry.npmjs.org/to-no-case cache-miss
+66 http fetch GET 200 https://registry.npmjs.org/to-no-case 104ms (cache updated)
+67 silly packumentCache full:https://registry.npmjs.org/to-no-case set size:undefined disposed:false
+68 http fetch GET 200 https://registry.npmjs.org/to-space-case 109ms (cache updated)
+69 silly packumentCache full:https://registry.npmjs.org/to-space-case set size:undefined disposed:false
+70 silly placeDep ROOT to-space-case@1.0.0 OK for: to-capital-case@1.0.0 want: ^1.0.0
+71 silly placeDep ROOT to-no-case@1.0.2 OK for: to-sentence-case@1.0.0 want: ^1.0.0
+72 silly placeDep ROOT @vue/devtools-api@6.6.4 OK for: vuex@4.1.0 want: ^6.0.0-beta.11
+73 silly reify moves {}
+74 silly ADD node_modules/@vue/devtools-api
+75 silly ADD node_modules/to-no-case
+76 silly ADD node_modules/to-space-case
+77 silly ADD node_modules/to-sentence-case
+78 silly ADD node_modules/to-capital-case
+79 silly ADD node_modules/title-case-minors
+80 silly ADD node_modules/escape-regexp-component
+81 silly ADD node_modules/vuex
+82 silly ADD node_modules/to-title-case
+83 silly ADD node_modules/@flowfuse/node-red-dashboard-2-ui-led
+84 verbose cwd /data
+85 verbose os Linux 6.6.51+rpt-rpi-v8
+86 verbose node v20.18.0
+87 verbose npm  v10.8.2
+88 verbose exit 0
+89 info ok

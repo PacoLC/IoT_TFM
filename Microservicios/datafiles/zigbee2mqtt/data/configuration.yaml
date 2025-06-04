@@ -1,0 +1,45 @@
+homeassistant: false
+permit_join: true
+frontend: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://mosquitto
+serial:
+  port: /dev/ttyUSB0
+  network_key:
+    - 56
+    - 254
+    - 137
+    - 232
+    - 92
+    - 65
+    - 50
+    - 158
+    - 5
+    - 170
+    - 232
+    - 72
+    - 228
+    - 183
+    - 203
+    - 219
+  pan_id: 29294
+  ext_pan_id:
+    - 14
+    - 14
+    - 52
+    - 45
+    - 90
+    - 93
+    - 177
+    - 199
+devices:
+  '0x32d004602bd5b370':
+    friendly_name: '0x32d004602bd5b370'
+  '0xa4c138ddf18abbdd':
+    friendly_name: Compresor
+blocklist:
+  - '0xa4c138a342088798'
+  - '0xa4c1381d20404553'
+  - '0x00158d000394440c'
+  - '0xa4c138e32a5b4477'

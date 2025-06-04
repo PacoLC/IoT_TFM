@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "repairs.issue_registry",
+  "data": {
+    "issues": [
+      {
+        "created": "2025-03-31T09:21:08.094881+00:00",
+        "dismissed_version": null,
+        "domain": "zha",
+        "is_persistent": false,
+        "issue_id": "inconsistent_network_settings"
+      },
+      {
+        "created": "2025-03-31T09:43:42.496194+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_202987887_tags/v4.1.2"
+      }
+    ]
+  }
+}

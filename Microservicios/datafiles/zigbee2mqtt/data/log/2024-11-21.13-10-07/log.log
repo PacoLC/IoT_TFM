@@ -1,0 +1,21 @@
+[2024-11-21 13:10:07] info: 	z2m: Logging to console, file (filename: log.log)
+[2024-11-21 13:10:07] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2024-11-21 13:10:07] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2024-11-21 13:10:08] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2024-11-21 13:10:08] info: 	zh:zstack:znp: Serialport opened
+[2024-11-21 13:10:20] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2024-11-21 13:10:26] error: 	z2m: Error while starting zigbee-herdsman
+[2024-11-21 13:10:26] error: 	z2m: Failed to start zigbee
+[2024-11-21 13:10:26] error: 	z2m: Check https://www.zigbee2mqtt.io/guide/installation/20_zigbee2mqtt-fails-to-start.html for possible solutions
+[2024-11-21 13:10:26] error: 	z2m: Exiting...
+[2024-11-21 13:10:27] error: 	z2m: Error: SRSP - UTIL - getDeviceInfo after 6000ms
+    at Object.start (/app/node_modules/zigbee-herdsman/src/utils/waitress.ts:59:23)
+    at /app/node_modules/zigbee-herdsman/src/adapter/z-stack/znp/znp.ts:285:45
+    at Queue.execute (/app/node_modules/zigbee-herdsman/src/utils/queue.ts:36:26)
+    at Znp.request (/app/node_modules/zigbee-herdsman/src/adapter/z-stack/znp/znp.ts:278:27)
+    at Znp.requestWithReply (/app/node_modules/zigbee-herdsman/src/adapter/z-stack/znp/znp.ts:257:34)
+    at /app/node_modules/zigbee-herdsman/src/adapter/z-stack/adapter/zStackAdapter.ts:177:47
+    at Queue.execute (/app/node_modules/zigbee-herdsman/src/utils/queue.ts:36:26)
+    at ZStackAdapter.getCoordinatorIEEE (/app/node_modules/zigbee-herdsman/src/adapter/z-stack/adapter/zStackAdapter.ts:175:33)
+    at Controller.start (/app/node_modules/zigbee-herdsman/src/controller/controller.ts:191:52)
+    at Zigbee.start (/app/lib/zigbee.ts:69:27)

@@ -1,0 +1,26 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm remove node-red-contrib-ui-led
+8 verbose argv "remove" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "node-red-contrib-ui-led"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2025-03-31T17_37_53_935Z-
+10 verbose logfile /data/.npm/_logs/2025-03-31T17_37_53_935Z-debug-0.log
+11 silly packumentCache heap:2038431744 maxSize:509607936 maxEntrySize:254803968
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly reify mark retired [ '/data/node_modules/node-red-contrib-ui-led' ]
+16 silly reify moves {
+16 silly reify   '/data/node_modules/node-red-contrib-ui-led': '/data/node_modules/.node-red-contrib-ui-led-MrsqwAqa'
+16 silly reify }
+17 silly REMOVE node_modules/node-red-contrib-ui-led
+18 verbose cwd /data
+19 verbose os Linux 6.6.51+rpt-rpi-v8
+20 verbose node v20.18.0
+21 verbose npm  v10.8.2
+22 verbose exit 0
+23 info ok

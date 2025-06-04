@@ -1,0 +1,70 @@
+[2025-03-31 11:36:30] info: 	z2m: Logging to console, file (filename: log.log)
+[2025-03-31 11:36:30] info: 	z2m: Starting Zigbee2MQTT version 1.41.0 (commit #cc31cea)
+[2025-03-31 11:36:30] info: 	z2m: Starting zigbee-herdsman (2.1.7)
+[2025-03-31 11:36:31] info: 	zh:zstack:znp: Opening SerialPort with {"path":"/dev/ttyUSB0","baudRate":115200,"rtscts":false,"autoOpen":false}
+[2025-03-31 11:36:31] info: 	zh:zstack:znp: Serialport opened
+[2025-03-31 11:36:31] info: 	z2m: zigbee-herdsman started (resumed)
+[2025-03-31 11:36:31] info: 	z2m: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}'
+[2025-03-31 11:36:31] info: 	z2m: 0x32d004602bd5b370 (0x32d004602bd5b370): LSPA9 - Elivco Smart plug (with power monitoring) (Router)
+[2025-03-31 11:36:31] info: 	z2m: Currently 1 devices are joined.
+[2025-03-31 11:36:31] warning: 	z2m: `permit_join` set to  `true` in configuration.yaml.
+[2025-03-31 11:36:31] warning: 	z2m: Allowing new devices to join.
+[2025-03-31 11:36:31] warning: 	z2m: Set `permit_join` to `false` once you joined all devices.
+[2025-03-31 11:36:31] info: 	z2m: Zigbee: allowing new devices to join.
+[2025-03-31 11:36:32] info: 	z2m: Connecting to MQTT server at mqtt://mosquitto
+[2025-03-31 11:36:32] info: 	z2m: Connected to MQTT server
+[2025-03-31 11:36:32] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+[2025-03-31 11:36:32] info: 	z2m: Started frontend on port 8080
+[2025-03-31 11:36:32] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"cc31cea","coordinator":{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"},"log_level":"info","network":{"channel":11,"extendedPanID":"0x00124b002f8b4661","panID":6754},"permit_join":true,"version":"1.41.0"}'
+[2025-03-31 11:36:32] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"voltage":230}'
+[2025-03-31 11:36:32] info: 	z2m: Zigbee2MQTT started!
+[2025-03-31 11:36:42] info: 	z2m: Configuring '0x32d004602bd5b370'
+[2025-03-31 11:36:43] info: 	z2m: Successfully configured '0x32d004602bd5b370'
+[2025-03-31 11:36:48] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"linkquality":153,"voltage":228}'
+[2025-03-31 11:36:48] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"energy":0,"linkquality":142,"voltage":228}'
+[2025-03-31 11:36:59] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"current":0,"energy":0,"linkquality":142,"power":0,"voltage":228}'
+[2025-03-31 11:37:25] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":145,"power":0,"state":"ON","voltage":228}'
+[2025-03-31 11:37:25] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":153,"power":0,"state":"ON","voltage":228}'
+[2025-03-31 11:37:25] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":156,"power":0,"state":"OFF","voltage":228}'
+[2025-03-31 11:37:25] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":138,"power":0,"state":"OFF","voltage":228}'
+[2025-03-31 11:37:26] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":153,"power":0,"state":"ON","voltage":228}'
+[2025-03-31 11:37:26] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":149,"power":0,"state":"ON","voltage":228}'
+[2025-03-31 11:37:27] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":149,"power":0,"state":"OFF","voltage":228}'
+[2025-03-31 11:37:27] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":131,"power":0,"state":"OFF","voltage":228}'
+[2025-03-31 11:37:28] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":149,"power":0,"state":"ON","voltage":228}'
+[2025-03-31 11:37:28] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":149,"power":0,"state":"ON","voltage":228}'
+[2025-03-31 11:37:29] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":134,"power":0,"state":"OFF","voltage":228}'
+[2025-03-31 11:37:29] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":171,"power":0,"state":"OFF","voltage":228}'
+[2025-03-31 11:37:30] info: 	z2m: Zigbee: disabling joining new devices.
+[2025-03-31 11:37:31] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{"time":254,"value":false},"status":"ok","transaction":"72x9f-1"}'
+[2025-03-31 11:37:32] info: 	z2m: Zigbee: allowing new devices to join.
+[2025-03-31 11:37:32] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/response/permit_join', payload '{"data":{"time":254,"value":true},"status":"ok","transaction":"72x9f-2"}'
+[2025-03-31 11:37:46] info: 	zh:controller: Interview for '0xa4c138ddf18abbdd' started
+[2025-03-31 11:37:46] info: 	z2m: Device '0xa4c138ddf18abbdd' joined
+[2025-03-31 11:37:46] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":{"friendly_name":"0xa4c138ddf18abbdd"},"type":"device_connected"}'
+[2025-03-31 11:37:46] info: 	z2m: Starting interview of '0xa4c138ddf18abbdd'
+[2025-03-31 11:37:46] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0xa4c138ddf18abbdd"},"type":"pairing"}'
+[2025-03-31 11:37:46] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138ddf18abbdd","ieee_address":"0xa4c138ddf18abbdd"},"type":"device_joined"}'
+[2025-03-31 11:37:46] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138ddf18abbdd","ieee_address":"0xa4c138ddf18abbdd","status":"started"},"type":"device_interview"}'
+[2025-03-31 11:37:46] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"announce","meta":{"friendly_name":"0xa4c138ddf18abbdd"},"type":"device_announced"}'
+[2025-03-31 11:37:46] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"friendly_name":"0xa4c138ddf18abbdd","ieee_address":"0xa4c138ddf18abbdd"},"type":"device_announce"}'
+[2025-03-31 11:37:47] info: 	zh:controller:device: Device '0xa4c138ddf18abbdd' is only compliant to revision '21' of the ZigBee specification (current revision: 23).
+[2025-03-31 11:37:48] info: 	zh:controller: Succesfully interviewed '0xa4c138ddf18abbdd'
+[2025-03-31 11:37:48] info: 	z2m: Successfully interviewed '0xa4c138ddf18abbdd', device has successfully been paired
+[2025-03-31 11:37:48] info: 	z2m: Device '0xa4c138ddf18abbdd' is supported, identified as: Tuya Smart plug (with power monitoring) (TS011F_plug_1)
+[2025-03-31 11:37:48] info: 	z2m: Configuring '0xa4c138ddf18abbdd'
+[2025-03-31 11:37:48] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/log', payload '{"message":"interview_successful","meta":{"description":"Smart plug (with power monitoring)","friendly_name":"0xa4c138ddf18abbdd","model":"TS011F_plug_1","supported":true,"vendor":"Tuya"},"type":"pairing"}'
+[2025-03-31 11:37:48] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/event', payload '{"data":{"definition":{"description":"Smart plug (with power monitoring)","exposes":[{"features":[{"access":7,"description":"On/off state of the switch","label":"State","name":"state","property":"state","type":"binary","value_off":"OFF","value_on":"ON","value_toggle":"TOGGLE"}],"type":"switch"},{"access":7,"description":"Countdown to turn device off after a certain time","label":"Countdown","name":"countdown","property":"countdown","type":"numeric","unit":"s","value_max":43200,"value_min":0,"value_step":1},{"access":7,"description":"Recover state after power outage","label":"Power outage memory","name":"power_outage_memory","property":"power_outage_memory","type":"enum","values":["on","off","restore"]},{"access":7,"description":"LED indicator mode","label":"Indicator mode","name":"indicator_mode","property":"indicator_mode","type":"enum","values":["off","off/on","on/off","on"]},{"access":1,"category":"diagnostic","description":"Instantaneous measured power","label":"Power","name":"power","property":"power","type":"numeric","unit":"W"},{"access":1,"category":"diagnostic","description":"Instantaneous measured electrical current","label":"Current","name":"current","property":"current","type":"numeric","unit":"A"},{"access":1,"category":"diagnostic","description":"Measured electrical potential value","label":"Voltage","name":"voltage","property":"voltage","type":"numeric","unit":"V"},{"access":1,"description":"Sum of consumed energy","label":"Energy","name":"energy","property":"energy","type":"numeric","unit":"kWh"},{"features":[{"access":3,"description":"Enables/disables physical input on the device","label":"State","name":"state","property":"child_lock","type":"binary","value_off":"UNLOCK","value_on":"LOCK"}],"label":"Child lock","type":"lock"},{"access":1,"category":"diagnostic","description":"Link quality (signal strength)","label":"Linkquality","name":"linkquality","property":"linkquality","type":"numeric","unit":"lqi","value_max":255,"value_min":0}],"model":"TS011F_plug_1","options":[{"access":2,"description":"Calibrates the power value (percentual offset), takes into effect on next report of device.","label":"Power calibration","name":"power_calibration","property":"power_calibration","type":"numeric"},{"access":2,"description":"Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it.","label":"Power precision","name":"power_precision","property":"power_precision","type":"numeric","value_max":3,"value_min":0},{"access":2,"description":"Calibrates the current value (percentual offset), takes into effect on next report of device.","label":"Current calibration","name":"current_calibration","property":"current_calibration","type":"numeric"},{"access":2,"description":"Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it.","label":"Current precision","name":"current_precision","property":"current_precision","type":"numeric","value_max":3,"value_min":0},{"access":2,"description":"Calibrates the voltage value (percentual offset), takes into effect on next report of device.","label":"Voltage calibration","name":"voltage_calibration","property":"voltage_calibration","type":"numeric"},{"access":2,"description":"Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it.","label":"Voltage precision","name":"voltage_precision","property":"voltage_precision","type":"numeric","value_max":3,"value_min":0},{"access":2,"description":"Calibrates the energy value (percentual offset), takes into effect on next report of device.","label":"Energy calibration","name":"energy_calibration","property":"energy_calibration","type":"numeric"},{"access":2,"description":"Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it.","label":"Energy precision","name":"energy_precision","property":"energy_precision","type":"numeric","value_max":3,"value_min":0},{"access":2,"description":"State actions will also be published as 'action' when true (default false).","label":"State action","name":"state_action","property":"state_action","type":"binary","value_off":false,"value_on":true}],"supports_ota":true,"vendor":"Tuya"},"friendly_name":"0xa4c138ddf18abbdd","ieee_address":"0xa4c138ddf18abbdd","status":"successful","supported":true},"type":"device_interview"}'
+[2025-03-31 11:37:49] info: 	z2m: Successfully configured '0xa4c138ddf18abbdd'
+[2025-03-31 11:37:53] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0xa4c138ddf18abbdd', payload '{"child_lock":"UNLOCK","countdown":0,"indicator_mode":"off/on","linkquality":134,"power_outage_memory":"restore","state":"ON"}'
+[2025-03-31 11:37:53] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0xa4c138ddf18abbdd', payload '{"child_lock":"UNLOCK","countdown":0,"indicator_mode":"off/on","linkquality":131,"power_outage_memory":"restore","state":"ON","voltage":226}'
+[2025-03-31 11:39:51] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/0x32d004602bd5b370', payload '{"countdown":0,"current":0,"energy":0,"linkquality":149,"power":0,"state":"OFF","voltage":225}'
+[2025-03-31 11:41:54] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'offline'
+[2025-03-31 11:41:54] info: 	z2m: Disconnecting from MQTT server
+[2025-03-31 11:41:54] info: 	z2m: Stopping zigbee-herdsman...
+[2025-03-31 11:41:54] error: 	z2m: MQTT error: read ECONNRESET
+[2025-03-31 11:42:03] info: 	zh:controller: Wrote coordinator backup to '/app/data/coordinator_backup.json'
+[2025-03-31 11:42:03] info: 	zh:zstack:znp: closing
+[2025-03-31 11:42:03] info: 	zh:zstack:znp: Port closed
+[2025-03-31 11:42:03] info: 	z2m: Stopped zigbee-herdsman
+[2025-03-31 11:42:03] info: 	z2m: Stopped Zigbee2MQTT
