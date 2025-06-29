@@ -30,26 +30,11 @@ Este repositorio contiene el código y documentación del Trabajo Fin de Máster
 ```bash
 git clone https://github.com/PacoLC/IoT_TFM.git
 cd IoT_TFM
-
-
-## 📚 Bibliografía
-
-1. [¿Qué es IoT? - AWS](https://aws.amazon.com/es/what-is/iot/)  
-2. [¿Qué es internet de las cosas? | SAP](https://www.sap.com/spain/products/artificial-intelligence/what-is-iot.html)  
-3. [Qué es la domótica - Ferrovial](https://www.ferrovial.com/es/recursos/domotica/)  
-4. [Domótica | IDAE](https://www.idae.es/tecnologias/eficiencia-energetica/edificacion/domotica)  
-5. [Alexa Smart Home | Amazon](https://www.amazon.com/alexa-smarthome/b?ie=UTF8&node=21442899011&ref=pe_alxhub_aucc_en_us_IC_HP_1_HUB_SMA)  
-6. [Gestiona tu hogar con Google Home](https://home.google.com/intl/es_es/welcome/)  
-7. [¿Qué es IIoT? - Iberdrola](https://www.iberdrola.com/innovacion/que-es-iiot)  
-8. [Industry IoT Consortium](https://www.iiconsortium.org/)  
-9. [Industry 4.0 Drivers - Nokia](https://www.nokia.com/thought-leadership/articles/industry-4-0/three-key-drivers-forsuccess/)  
-
-
+```
 
 ## 📚 Bibliografía
 
 [1] ¿Qué es IoT? - Explicación del Internet de las cosas - AWS. (s. f.). Amazon Web Services, Inc. Recuperado 27 de diciembre de 2024, de (https://aws.amazon.com/es/what-is/iot/)
-[1] [¿Qué es IoT? - AWS](https://aws.amazon.com/es/what-is/iot/)
 
 [2] ¿Qué es internet de las cosas? | IoT explicada. (s. f.). SAP. Recuperado 15 de diciembre de 2024, de https://www.sap.com/spain/products/artificial-intelligence/what-is-iot.html  
 
