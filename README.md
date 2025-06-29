@@ -35,6 +35,7 @@ cd IoT_TFM
 ## 📚 Bibliografía
 
 [1] ¿Qué es IoT? - Explicación del Internet de las cosas - AWS. (s. f.). Amazon Web Services, Inc. Recuperado 27 de diciembre de 2024, de (https://aws.amazon.com/es/what-is/iot/)
+[1] [¿Qué es IoT? - AWS](https://aws.amazon.com/es/what-is/iot/)
 
 [2] ¿Qué es internet de las cosas? | IoT explicada. (s. f.). SAP. Recuperado 15 de diciembre de 2024, de https://www.sap.com/spain/products/artificial-intelligence/what-is-iot.html  
 
